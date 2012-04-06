@@ -59,6 +59,11 @@ public class Previous extends Activity implements SensorEventListener{
         bioFilter = (CheckBox) findViewById(R.id.bio_checkbox);
         orgoFilter = (CheckBox) findViewById(R.id.orgo_checkbox);
         
+        physicsFilter.setChecked(true);
+        chemFilter.setChecked(true);
+        bioFilter.setChecked(true);
+        orgoFilter.setChecked(true);
+        
         
         //set todays date for date picker comparison
         Calendar today = new GregorianCalendar();
@@ -145,6 +150,17 @@ public class Previous extends Activity implements SensorEventListener{
             		filters[3] = "NO";
             	}
             	
+            	if(!orgoFilter.isChecked() && !chemFilter.isChecked() && !bioFilter.isChecked() && !physicsFilter.isChecked()){
+            		//none are checked, toast a problem
+            		Context context = getApplicationContext();
+        			CharSequence text = "Please select atleast one subject filter";
+        			int duration = Toast.LENGTH_SHORT;
+
+        			Toast toast = Toast.makeText(context, text, duration);
+        			toast.show();      
+            	}
+            	else{
+            	
             	randomURL = "http://www.mcatquestionaday.com/iPhoneX/getRandomQuestion.php?bioFilter=" + filters[2] + "&ochemFilter=" + filters[3] + "&phyFilter=" + filters[0] + "&chemFilter=" + filters[1];
             	
             	//load random url
@@ -157,7 +173,7 @@ public class Previous extends Activity implements SensorEventListener{
 				intent.putExtra("date", randomDateReturned);
 				intent.putExtra("prev", "YES");
                 startActivity(intent);
-            	
+            	}
             	
             }
             

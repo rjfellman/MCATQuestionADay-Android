@@ -6,12 +6,6 @@
     android:background="@drawable/mcatbackground" >
 
     <ImageButton
-        android:id="@+id/imageButton1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/todayq" />
-
-    <ImageButton
         android:id="@+id/imageButton6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -42,34 +36,6 @@
         android:layout_alignParentLeft="true"
         android:layout_alignTop="@+id/imageButton4"
         android:src="@drawable/stats" />
-
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:src="@drawable/previousq" />
-
-    <TextView
-        android:id="@+id/TextView02"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/imageButton1"
-        android:layout_below="@+id/imageButton1"
-        android:text="Today&apos;s Question"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#C00000" />
-
-    <TextView
-        android:id="@+id/TextView03"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/imageButton2"
-        android:text="   Prev Questions"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#C00000" />
 
     <TextView
         android:id="@+id/textView1"
@@ -108,6 +74,42 @@
         android:layout_alignLeft="@+id/imageButton6"
         android:layout_alignParentBottom="true"
         android:text="            News"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#C00000" />
+
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/todayq" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/previousq" />
+
+    <TextView
+        android:id="@+id/TextView02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/imageButton1"
+        android:layout_below="@+id/imageButton1"
+        android:text="Today&apos;s Question"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#C00000" />
+
+    <TextView
+        android:id="@+id/TextView03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageButton2"
+        android:layout_below="@+id/imageButton2"
+        android:text="   Prev Questions"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#C00000" />
 

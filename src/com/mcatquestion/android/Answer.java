@@ -19,6 +19,7 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -74,10 +75,14 @@ public class Answer extends Activity{
 	        	//show the results answer
 	        	resultsView.loadUrl("http://www.mcatquestion.com/iPhoneX/checkAnswerAndDisplayResults.php?date="+ date);
 	        	resultsView.setBackgroundColor(0x00000000);
+	        	resultsView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+
 	        	
 	        	//show the bargraph
 	        	bargraphView.loadUrl("http://www.mcatquestion.com/iPhoneX/androidGraph.php?date="+ date);
 	        	bargraphView.setBackgroundColor(0x00000000);
+	        	bargraphView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+
 			}
 			else{
 				//answer is incorrect
@@ -85,6 +90,10 @@ public class Answer extends Activity{
 	        	answerText.setText("Sorry, Try Again!");
 	        	resultsView.setBackgroundColor(0x00000000);
 	        	bargraphView.setBackgroundColor(0x00000000);
+	        	resultsView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+	        	bargraphView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+
+
 	        	
 	        	//show red X mark image
 	        	answerImage.setImageDrawable(getResources().getDrawable(R.drawable.cancel));

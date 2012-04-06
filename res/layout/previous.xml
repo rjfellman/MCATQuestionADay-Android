@@ -11,7 +11,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="33dp" />
+        android:layout_marginTop="33dp"
+        android:startYear="2008" />
 
     <Button
         android:id="@+id/submit_button"
@@ -23,7 +24,7 @@
         android:text="@string/submit" />
 
     <CheckBox
-        android:id="@+id/CheckBox01"
+        android:id="@+id/physics_checkbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -33,7 +34,7 @@
         android:text="Physics" />
 
     <CheckBox
-        android:id="@+id/CheckBox02"
+        android:id="@+id/chem_checkbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -42,7 +43,7 @@
         android:text="Chemistry" />
 
     <CheckBox
-        android:id="@+id/CheckBox03"
+        android:id="@+id/bio_checkbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -50,35 +51,34 @@
         android:textColor="#000000"
         android:text="Biology" />
 
+    <Button
+        android:id="@+id/random_button"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/submit_button"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+        android:text="Get a Random Question" />
+
     <CheckBox
-        android:id="@+id/checkBox1"
+        android:id="@+id/orgo_checkbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/CheckBox01"
-        android:layout_alignBottom="@+id/CheckBox01"
-        android:layout_alignLeft="@+id/CheckBox03"
+        android:layout_alignBaseline="@+id/physics_checkbox"
+        android:layout_alignBottom="@+id/physics_checkbox"
+        android:layout_alignLeft="@+id/bio_checkbox"
         android:text="Orgo"
         android:textColor="#000000" />
 
-    <TextView
-        android:id="@+id/TextView01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/CheckBox01"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="61dp"
-        android:text="Shake for a random question!"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#000000" />
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/CheckBox01"
-        android:layout_centerHorizontal="true"
-        android:text="Apply Filters"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#000000" />
+    <View
+        android:id="@+id/View1"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/submit_button"
+        android:layout_marginTop="24dp"
+        android:background="#C00000"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" />
 
 </RelativeLayout>

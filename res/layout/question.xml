@@ -108,7 +108,7 @@
         android:layout_marginRight = "10dp"
         android:text="TextView"
         android:textColor="#C00000"
-        android:textStyle="italic"
+        android:textStyle="bold|italic"
         android:textSize="16dp" />
 
 </RelativeLayout>

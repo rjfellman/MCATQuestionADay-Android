@@ -77,16 +77,6 @@
         android:src="@drawable/placemarkerbg" />
 
     <TextView
-        android:id="@+id/TextView01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/ImageView01"
-        android:layout_below="@+id/ImageView01"
-        android:text="Physics"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#C00000" />
-
-    <TextView
         android:id="@+id/TextView04"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -117,16 +107,6 @@
         android:textColor="#C00000" />
 
     <TextView
-        android:id="@+id/TextView06"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/imageView1"
-        android:layout_below="@+id/imageView1"
-        android:text="Chemistry"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#C00000" />
-
-    <TextView
         android:id="@+id/TextView03"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -142,16 +122,6 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/ImageView04"
         android:layout_centerHorizontal="true"
-        android:text="Orgo"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#C00000" />
-
-    <TextView
-        android:id="@+id/TextView07"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/ImageView03"
-        android:layout_below="@+id/ImageView03"
         android:text="Orgo"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="#C00000" />
@@ -187,5 +157,78 @@
         android:layout_alignBottom="@+id/ImageView04"
         android:layout_alignLeft="@+id/ImageView04"
         android:src="@drawable/newplacemarker" />
+
+                <TextView
+                    android:id="@+id/TextView08"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/ImageView01"
+                    android:layout_below="@+id/ImageView01"
+                    android:text="Physics"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#C00000" />
+
+                <TextView
+                    android:id="@+id/TextView01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/ImageView01"
+                    android:layout_below="@+id/TextView05"
+                    android:text="100%"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#C00000" />
+
+                <TextView
+                    android:id="@+id/TextView09"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/TextView01"
+                    android:layout_alignBottom="@+id/TextView01"
+                    android:layout_alignLeft="@+id/ImageView02"
+                    android:text="100%"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#C00000" />
+
+                <TextView
+                    android:id="@+id/TextView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/imageView1"
+                    android:layout_below="@+id/imageView1"
+                    android:text="Chemistry"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#C00000" />
+
+                <TextView
+                    android:id="@+id/TextView06"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/TextView09"
+                    android:layout_alignBottom="@+id/TextView09"
+                    android:layout_alignLeft="@+id/imageView1"
+                    android:text="100%"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#C00000" />
+
+                <TextView
+                    android:id="@+id/TextView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/ImageView03"
+                    android:layout_below="@+id/ImageView03"
+                    android:text="Orgo"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#C00000" />
+
+                <TextView
+                    android:id="@+id/TextView07"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/TextView06"
+                    android:layout_alignBottom="@+id/TextView06"
+                    android:layout_alignLeft="@+id/ImageView03"
+                    android:text="100%"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#C00000" />
 
 </RelativeLayout>

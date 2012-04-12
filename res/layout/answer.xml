@@ -46,4 +46,14 @@
         android:layout_alignParentLeft="true"
         android:layout_marginBottom="15dp" />
 
+    <View
+        android:id="@+id/View1"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_alignBottom="@+id/results_webview"
+        android:layout_alignParentLeft="true"
+        android:background="#C00000"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" />
+
 </RelativeLayout>

@@ -127,7 +127,6 @@ public class MyStats extends Activity{
         pctMark3 = (ImageView) findViewById(R.id.imageView11);
         pctMark4 = (ImageView) findViewById(R.id.imageView2);
         
-        
         /*
         Bitmap bmp1=BitmapFactory.decodeResource(getResources(), R.drawable.horizbar);
         int width1=20;

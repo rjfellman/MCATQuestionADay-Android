@@ -12,6 +12,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:layout_marginRight="34dp"
+        android:scaleType="fitCenter"
         android:src="@drawable/horizbar" />
 
     <ImageView
@@ -21,6 +22,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginRight="19dp"
         android:layout_toLeftOf="@+id/ImageView03"
+        android:scaleType="fitCenter"
         android:src="@drawable/horizbar" />
 
     <ImageView
@@ -30,6 +32,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginRight="16dp"
         android:layout_toLeftOf="@+id/imageView1"
+        android:scaleType="fitCenter"
         android:src="@drawable/horizbar" />
 
     <ImageView
@@ -39,6 +42,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginRight="16dp"
         android:layout_toLeftOf="@+id/ImageView02"
+        android:scaleType="fitCenter"
         android:src="@drawable/horizbar" />
 
     <ImageView
@@ -133,24 +137,24 @@
         android:layout_alignBottom="@+id/ImageView05"
         android:layout_alignLeft="@+id/ImageView05"
         android:src="@drawable/newplacemarker" />
-    
-        <ImageView
+
+    <ImageView
         android:id="@+id/imageView9"
         android:layout_width="wrap_content"
         android:layout_height="27dp"
         android:layout_alignBottom="@+id/ImageView06"
         android:layout_alignLeft="@+id/ImageView06"
         android:src="@drawable/newplacemarker" />
-        
-            <ImageView
+
+    <ImageView
         android:id="@+id/imageView10"
         android:layout_width="wrap_content"
         android:layout_height="27dp"
         android:layout_alignBottom="@+id/ImageView07"
         android:layout_alignLeft="@+id/ImageView07"
         android:src="@drawable/newplacemarker" />
-            
-                <ImageView
+
+    <ImageView
         android:id="@+id/imageView11"
         android:layout_width="wrap_content"
         android:layout_height="27dp"
@@ -158,77 +162,77 @@
         android:layout_alignLeft="@+id/ImageView04"
         android:src="@drawable/newplacemarker" />
 
-                <TextView
-                    android:id="@+id/TextView08"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/ImageView01"
-                    android:layout_below="@+id/ImageView01"
-                    android:text="Physics"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textColor="#C00000" />
+    <TextView
+        android:id="@+id/TextView08"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ImageView01"
+        android:layout_below="@+id/ImageView01"
+        android:text="Physics"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#C00000" />
 
-                <TextView
-                    android:id="@+id/TextView01"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/ImageView01"
-                    android:layout_below="@+id/TextView05"
-                    android:text="100%"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textColor="#C00000" />
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ImageView01"
+        android:layout_below="@+id/TextView05"
+        android:text="100%"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#C00000" />
 
-                <TextView
-                    android:id="@+id/TextView09"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/TextView01"
-                    android:layout_alignBottom="@+id/TextView01"
-                    android:layout_alignLeft="@+id/ImageView02"
-                    android:text="100%"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textColor="#C00000" />
+    <TextView
+        android:id="@+id/TextView09"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TextView01"
+        android:layout_alignBottom="@+id/TextView01"
+        android:layout_alignLeft="@+id/ImageView02"
+        android:text="100%"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#C00000" />
 
-                <TextView
-                    android:id="@+id/TextView10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/imageView1"
-                    android:layout_below="@+id/imageView1"
-                    android:text="Chemistry"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textColor="#C00000" />
+    <TextView
+        android:id="@+id/TextView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_below="@+id/imageView1"
+        android:text="Chemistry"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#C00000" />
 
-                <TextView
-                    android:id="@+id/TextView06"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/TextView09"
-                    android:layout_alignBottom="@+id/TextView09"
-                    android:layout_alignLeft="@+id/imageView1"
-                    android:text="100%"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textColor="#C00000" />
+    <TextView
+        android:id="@+id/TextView06"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TextView09"
+        android:layout_alignBottom="@+id/TextView09"
+        android:layout_alignLeft="@+id/imageView1"
+        android:text="100%"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#C00000" />
 
-                <TextView
-                    android:id="@+id/TextView11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/ImageView03"
-                    android:layout_below="@+id/ImageView03"
-                    android:text="Orgo"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textColor="#C00000" />
+    <TextView
+        android:id="@+id/TextView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ImageView03"
+        android:layout_below="@+id/ImageView03"
+        android:text="Orgo"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#C00000" />
 
-                <TextView
-                    android:id="@+id/TextView07"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/TextView06"
-                    android:layout_alignBottom="@+id/TextView06"
-                    android:layout_alignLeft="@+id/ImageView03"
-                    android:text="100%"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textColor="#C00000" />
+    <TextView
+        android:id="@+id/TextView07"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TextView06"
+        android:layout_alignBottom="@+id/TextView06"
+        android:layout_alignLeft="@+id/ImageView03"
+        android:text="100%"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#C00000" />
 
 </RelativeLayout>

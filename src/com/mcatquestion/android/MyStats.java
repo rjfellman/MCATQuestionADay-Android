@@ -30,7 +30,7 @@ public class MyStats extends Activity{
 	TextView pctText1, pctText2, pctText3, pctText4;
 	
 	public static final String myStatsUrl = "http://www.mcatquestionaday.com/iPhoneX/getStats.php?userid=";
-	String userID = "Rusty";
+	String userID = "CF76C5DD-1FE6-5540-8E6C-BBDB7F62D578";
 	
 	/** Called when the activity is first created. */
     @Override
@@ -53,37 +53,61 @@ public class MyStats extends Activity{
       //JSON
         JSONObject json = getJSONfromURL(myStatsUrl + userID);
         JSONArray jarray = null;
-   	try {
-   		jarray = json.getJSONArray("android_list");
-   	} catch (JSONException e) {
-   		// TODO Auto-generated catch block
-   		e.printStackTrace();
-   	}
-        
 
-        String[] mStrings = new String[jarray.length()];
-
-        for (int i=0; i<jarray.length(); i++)
-        {
-            try {
-   			mStrings[i] = jarray.getString(i);
-   		} catch (JSONException e) {
-   			// TODO Auto-generated catch block
-   			e.printStackTrace();
-   		}
-        }
+        ;
+        ;
+        	
+        //set the text views
+        try {
+			barText1.setText(json.getString("PhysicsScore")+"%");
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        try {
+			barText2.setText(json.getString("BioScore")+"%");
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        try {
+			barText3.setText(json.getString("ChemScore")+"%");
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        try {
+			barText4.setText(json.getString("OrgoScore")+"%");
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
         
         //set the text views
-        barText1.setText("98%");
-        barText2.setText("68%");
-        barText3.setText("48%");
-        barText4.setText("28%");
-        
-        //set the text views
-        pctText1.setText("Physics - 87th Percentile ");
-        pctText2.setText("Biology - 27th Percentile");
-        pctText3.setText("Chemistry - 45th Percentile");
-        pctText4.setText("Orgo - 17th Percentile");
+        try {
+			pctText1.setText("Physics - " + json.getString("PhysicsPercentile") + "th Percentile ");
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        try {
+			pctText2.setText("Biology - " + json.getString("BioPercentile") + "th Percentile");
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        try {
+			pctText3.setText("Chemistry - " + json.getString("ChemPercentile") + "th Percentile");
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        try {
+			pctText4.setText("Orgo - " + json.getString("OChemPercentile") + "th Percentile");
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
         
         //get the image views
         barchart1 = (ImageView) findViewById(R.id.ImageView01);

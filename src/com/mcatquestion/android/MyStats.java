@@ -126,31 +126,69 @@ public class MyStats extends Activity{
         pctMark2 = (ImageView) findViewById(R.id.imageView10);
         pctMark3 = (ImageView) findViewById(R.id.imageView11);
         pctMark4 = (ImageView) findViewById(R.id.imageView2);
+        
+        
         /*
         Bitmap bmp1=BitmapFactory.decodeResource(getResources(), R.drawable.horizbar);
         int width1=20;
-        int height1=45;
+        int height1=0;
+		try {
+			height1 = Integer.parseInt(json.getString("PhysicsScore"));
+		} catch (NumberFormatException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
         Bitmap resizedbitmap1=Bitmap.createScaledBitmap(bmp1, width1, height1, true);
 
         barchart1.setImageBitmap(resizedbitmap1);
         
         Bitmap bmp2=BitmapFactory.decodeResource(getResources(), R.drawable.horizbar);
         int width2=20;
-        int height2=45;
+        int height2=0;
+		try {
+			height2 = Integer.parseInt(json.getString("BioScore"));
+		} catch (NumberFormatException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
         Bitmap resizedbitmap2=Bitmap.createScaledBitmap(bmp2, width2, height2, true);
 
         barchart2.setImageBitmap(resizedbitmap2);
         
         Bitmap bmp3=BitmapFactory.decodeResource(getResources(), R.drawable.horizbar);
         int width3=20;
-        int height3=45;
+        int height3=0;
+		try {
+			height3 = Integer.parseInt(json.getString("ChemScore"));
+		} catch (NumberFormatException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
         Bitmap resizedbitmap3=Bitmap.createScaledBitmap(bmp3, width3, height3, true);
 
         barchart3.setImageBitmap(resizedbitmap3);
         
         Bitmap bmp4=BitmapFactory.decodeResource(getResources(), R.drawable.horizbar);
         int width4=20;
-        int height4=45;
+        int height4=0;
+		try {
+			height4 = Integer.parseInt(json.getString("OrgoScore"));
+		} catch (NumberFormatException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
         Bitmap resizedbitmap4=Bitmap.createScaledBitmap(bmp4, width4, height4, true);
 
         barchart4.setImageBitmap(resizedbitmap4);

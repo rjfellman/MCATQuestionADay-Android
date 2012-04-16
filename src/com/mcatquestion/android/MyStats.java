@@ -52,10 +52,6 @@ public class MyStats extends Activity{
         
       //JSON
         JSONObject json = getJSONfromURL(myStatsUrl + userID);
-        JSONArray jarray = null;
-
-        ;
-        ;
         	
         //set the text views
         try {
@@ -127,7 +123,7 @@ public class MyStats extends Activity{
         pctMark3 = (ImageView) findViewById(R.id.imageView11);
         pctMark4 = (ImageView) findViewById(R.id.imageView2);
         
-        /*
+        
         Bitmap bmp1=BitmapFactory.decodeResource(getResources(), R.drawable.horizbar);
         int width1=20;
         int height1=0;
@@ -191,7 +187,7 @@ public class MyStats extends Activity{
         Bitmap resizedbitmap4=Bitmap.createScaledBitmap(bmp4, width4, height4, true);
 
         barchart4.setImageBitmap(resizedbitmap4);
-		*/
+		
         
         
     }

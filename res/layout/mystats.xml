@@ -4,235 +4,40 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/mcatbackground" >
-
-    <ImageView
-        android:id="@+id/ImageView03"
-        android:layout_width="54dp"
-        android:layout_height="165dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginRight="34dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/horizbar" />
-
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="54dp"
-        android:layout_height="165dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginRight="19dp"
-        android:layout_toLeftOf="@+id/ImageView03"
-        android:scaleType="fitCenter"
-        android:src="@drawable/horizbar" />
-
-    <ImageView
-        android:id="@+id/ImageView02"
-        android:layout_width="54dp"
-        android:layout_height="165dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginRight="16dp"
-        android:layout_toLeftOf="@+id/imageView1"
-        android:scaleType="fitCenter"
-        android:src="@drawable/horizbar" />
-
-    <ImageView
-        android:id="@+id/ImageView01"
-        android:layout_width="54dp"
-        android:layout_height="165dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginRight="16dp"
-        android:layout_toLeftOf="@+id/ImageView02"
-        android:scaleType="fitCenter"
-        android:src="@drawable/horizbar" />
-
-    <ImageView
-        android:id="@+id/ImageView04"
-        android:layout_width="wrap_content"
+    
+<WebView
+        android:id="@+id/webview_stats"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_marginTop = "10dp"
         android:layout_alignParentLeft="true"
-        android:src="@drawable/placemarkerbg" />
+        android:layout_alignParentTop="true"/>
 
-    <ImageView
-        android:id="@+id/ImageView06"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/ImageView04"
+<WebView
+        android:id="@+id/webview_statsPct"
+        android:layout_width="fill_parent"
+        android:layout_height="175dp"
+        android:layout_marginTop = "0dp"
         android:layout_alignParentLeft="true"
-        android:layout_marginBottom="18dp"
-        android:src="@drawable/placemarkerbg" />
+        android:layout_alignParentBottom="true"/>
 
-    <ImageView
-        android:id="@+id/ImageView07"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/ImageView06"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="21dp"
-        android:src="@drawable/placemarkerbg" />
+<ImageView
+    android:id="@+id/imageView1"
+    android:layout_width="fill_parent"
+    android:layout_height="34dp"
+    android:layout_below="@+id/webview_stats"
+    android:layout_centerHorizontal="true"
+    android:src="@drawable/statslabels" />
 
-    <ImageView
-        android:id="@+id/ImageView05"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/ImageView07"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="20dp"
-        android:src="@drawable/placemarkerbg" />
-
-    <TextView
-        android:id="@+id/TextView04"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/ImageView05"
-        android:layout_centerHorizontal="true"
-        android:text="Physics"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#C00000" />
-
-    <TextView
-        android:id="@+id/TextView05"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/ImageView02"
-        android:layout_below="@+id/ImageView02"
-        android:text="Biology"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#C00000" />
-
-    <TextView
-        android:id="@+id/TextView02"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/ImageView07"
-        android:layout_alignLeft="@+id/TextView04"
-        android:text="Biology"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#C00000" />
-
-    <TextView
-        android:id="@+id/TextView03"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/ImageView06"
-        android:layout_centerHorizontal="true"
-        android:text="Chemistry"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#C00000" />
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/ImageView04"
-        android:layout_centerHorizontal="true"
-        android:text="Orgo"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#C00000" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="27dp"
-        android:layout_alignBottom="@+id/ImageView05"
-        android:layout_alignLeft="@+id/ImageView05"
-        android:src="@drawable/newplacemarker" />
-
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="wrap_content"
-        android:layout_height="27dp"
-        android:layout_alignBottom="@+id/ImageView06"
-        android:layout_alignLeft="@+id/ImageView06"
-        android:src="@drawable/newplacemarker" />
-
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="wrap_content"
-        android:layout_height="27dp"
-        android:layout_alignBottom="@+id/ImageView07"
-        android:layout_alignLeft="@+id/ImageView07"
-        android:src="@drawable/newplacemarker" />
-
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="wrap_content"
-        android:layout_height="27dp"
-        android:layout_alignBottom="@+id/ImageView04"
-        android:layout_alignLeft="@+id/ImageView04"
-        android:src="@drawable/newplacemarker" />
-
-    <TextView
-        android:id="@+id/TextView08"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/ImageView01"
-        android:layout_below="@+id/ImageView01"
-        android:text="Physics"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#C00000" />
-
-    <TextView
-        android:id="@+id/TextView01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/ImageView01"
-        android:layout_below="@+id/TextView05"
-        android:text="100%"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#C00000" />
-
-    <TextView
-        android:id="@+id/TextView09"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/TextView01"
-        android:layout_alignBottom="@+id/TextView01"
-        android:layout_alignLeft="@+id/ImageView02"
-        android:text="100%"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#C00000" />
-
-    <TextView
-        android:id="@+id/TextView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/imageView1"
-        android:layout_below="@+id/imageView1"
-        android:text="Chemistry"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#C00000" />
-
-    <TextView
-        android:id="@+id/TextView06"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/TextView09"
-        android:layout_alignBottom="@+id/TextView09"
-        android:layout_alignLeft="@+id/imageView1"
-        android:text="100%"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#C00000" />
-
-    <TextView
-        android:id="@+id/TextView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/ImageView03"
-        android:layout_below="@+id/ImageView03"
-        android:text="Orgo"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#C00000" />
-
-    <TextView
-        android:id="@+id/TextView07"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/TextView06"
-        android:layout_alignBottom="@+id/TextView06"
-        android:layout_alignLeft="@+id/ImageView03"
-        android:text="100%"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#C00000" />
+<View
+    android:id="@+id/View1"
+    android:layout_width="fill_parent"
+    android:layout_height="2dp"
+    android:layout_alignParentLeft="true"
+    android:layout_below="@+id/imageView1"
+    android:background="#C00000"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp" 
+    android:layout_marginTop="15dp"/>
 
 </RelativeLayout>

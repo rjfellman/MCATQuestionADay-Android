@@ -5,39 +5,13 @@
     android:layout_height="fill_parent"
     android:background="@drawable/mcatbackground" >
     
-<WebView
-        android:id="@+id/webview_stats"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop = "10dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"/>
-
-<WebView
-        android:id="@+id/webview_statsPct"
-        android:layout_width="fill_parent"
-        android:layout_height="175dp"
-        android:layout_marginTop = "0dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"/>
-
-<ImageView
-    android:id="@+id/imageView1"
-    android:layout_width="fill_parent"
-    android:layout_height="34dp"
-    android:layout_below="@+id/webview_stats"
-    android:layout_centerHorizontal="true"
-    android:src="@drawable/statslabels" />
-
-<View
-    android:id="@+id/View1"
-    android:layout_width="fill_parent"
-    android:layout_height="2dp"
-    android:layout_alignParentLeft="true"
-    android:layout_below="@+id/imageView1"
-    android:background="#C00000"
-    android:paddingBottom="10dp"
-    android:paddingTop="10dp" 
-    android:layout_marginTop="15dp"/>
+<LinearLayout 
+	android:id="@+id/chart" 
+	android:orientation="horizontal"
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content"
+    android:layout_weight="1">
+</LinearLayout>
+    
 
 </RelativeLayout>

@@ -14,6 +14,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -21,6 +22,7 @@ import android.util.Log;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class MyStats extends Activity{
@@ -38,19 +40,9 @@ public class MyStats extends Activity{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mystats);
-        
-        barcharts = (WebView) findViewById(R.id.webview_stats);
-        percentile = (WebView) findViewById(R.id.webview_statsPct);
-        
-        barcharts.getSettings().setJavaScriptEnabled(true);
-        barcharts.loadUrl(barchartsURL);
-        barcharts.setBackgroundColor(0x00000000);
-        barcharts.setScrollContainer(false);
-        
-        percentile.getSettings().setJavaScriptEnabled(true);
-        percentile.loadUrl(pctURL);
-        percentile.setBackgroundColor(0x00000000);
-        percentile.setScrollContainer(false);
+                
+        Intent achartIntent = new MyStatsChart().execute(this);
+        startActivity(achartIntent);
         
     }
 }

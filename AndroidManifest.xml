@@ -23,6 +23,12 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.mcatquestion.android.Login"
+            android:label="Login">
+        </activity>
+        <activity android:name="org.achartengine.GraphicalActivity">
+            </activity>
+        <activity
             android:name="com.mcatquestion.android.Question"
             android:label="Question">
         </activity>

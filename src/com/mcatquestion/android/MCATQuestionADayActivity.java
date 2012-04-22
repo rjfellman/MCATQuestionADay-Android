@@ -35,6 +35,11 @@ public class MCATQuestionADayActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
+        AppPreferences preferences = new AppPreferences(this);
+        System.out.println(preferences.getUsername());
+        System.out.println(preferences.getPassword());
+        System.out.println(preferences.getIsLoggedIn());
+        
         final Context context = this;
         
         todaysQuestionButton = (ImageButton) findViewById(R.id.imageButton1);

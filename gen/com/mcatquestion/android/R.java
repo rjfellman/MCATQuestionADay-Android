@@ -51,7 +51,6 @@ public final class R {
         public static final int answer_text=0x7f050002;
         public static final int bargraph_webview=0x7f050004;
         public static final int bio_checkbox=0x7f05001f;
-        public static final int chart=0x7f050018;
         public static final int chem_checkbox=0x7f05001e;
         public static final int datePicker1=0x7f05001b;
         public static final int date_display=0x7f05002c;
@@ -80,6 +79,7 @@ public final class R {
         public static final int submit_button=0x7f05001c;
         public static final int textView1=0x7f05000a;
         public static final int usernameField=0x7f050009;
+        public static final int usernameStats=0x7f050018;
         public static final int webview_answer=0x7f050024;
         public static final int webview_ecourse=0x7f050007;
         public static final int webview_news=0x7f05001a;

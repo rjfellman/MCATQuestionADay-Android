@@ -4,14 +4,15 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/mcatbackground" >
-    
-<LinearLayout 
-	android:id="@+id/chart" 
-	android:orientation="horizontal"
-    android:layout_width="fill_parent" 
-    android:layout_height="wrap_content"
-    android:layout_weight="1">
-</LinearLayout>
-    
+
+    <TextView
+        android:id="@+id/usernameStats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Stats for: XXXX"
+        android:textColor="#C00000"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>

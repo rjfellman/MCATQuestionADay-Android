@@ -1,7 +1,11 @@
 package com.mcatquestion.android;
 
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -27,12 +31,11 @@ public class Question extends Activity{
 	TextView dateLabel;
 	
 	String answerSelected = "";
-	String date;
+	String date = "";
 	String dateForLabel;
 	String isPrev;
 	
 	Intent intent;
-	
 	
 	/** Called when the activity is first created. */
     @Override
@@ -41,6 +44,8 @@ public class Question extends Activity{
         setContentView(R.layout.question);
         
         final Context context = this;
+        final AppPreferences preferences = new AppPreferences(this);
+        final ArrayList answered = preferences.getAnsweredQuestions();
         
         //if today's date
                 
@@ -128,6 +133,42 @@ public class Question extends Activity{
         
         submitButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+            	if(answered.contains(date)){
+            		//then it was already answered, dont log stats
+            		String answerToCloud = "http://www.mcatquestionaday.com/iPhoneX/checkAnswer.php?date="+date+"&answer="+answerSelected+"&userid="+preferences.getUsername()+"&didAnswer=NO";
+            		URL url = null;
+					try {
+						url = new URL(answerToCloud);
+					} catch (MalformedURLException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+            		try {
+						url.openConnection ();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+            	}
+            	else {
+            		//add it to list and log stats
+            		preferences.addToAnsweredQuestions(date);
+            		String answerToCloud = "http://www.mcatquestionaday.com/iPhoneX/checkAnswer.php?date="+date+"&answer="+answerSelected+"&userid="+preferences.getUsername()+"&didAnswer=YES";
+            		URL url = null;
+					try {
+						url = new URL(answerToCloud);
+					} catch (MalformedURLException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+            		try {
+						url.openConnection ();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+            	}
+            	
             	intent = new Intent(context, Answer.class);
             	
 				intent.putExtra("answer", answerSelected);

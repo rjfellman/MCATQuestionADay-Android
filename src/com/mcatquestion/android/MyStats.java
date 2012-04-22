@@ -14,6 +14,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -30,8 +31,6 @@ public class MyStats extends Activity{
 	WebView barcharts, percentile;
 	
 	public static final String myStatsUrl = "http://www.mcatquestionaday.com/iPhoneX/getStats.php?userid=";
-	String userID = "CF76C5DD-1FE6-5540-8E6C-BBDB7F62D578";
-	
 	public static final String barchartsURL= "http://www.mcatquestionaday.com/iPhoneX/MCAT-Bargraphs-Stats.html";
 	public static final String pctURL= "http://www.mcatquestionaday.com/iPhoneX/MCAT-Percentiles.html";
 	
@@ -40,9 +39,16 @@ public class MyStats extends Activity{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mystats);
+        
+        final AppPreferences preferences = new AppPreferences(this);
+        String userID = preferences.getUsername();
+		//TODO try unhandled exception here;
+        
+        TextView userLabel = (TextView) findViewById(R.id.usernameStats);
+        userLabel.setText(userID);
                 
-        Intent achartIntent = new MyStatsChart().execute(this);
-        startActivity(achartIntent);
+        //Intent achartIntent = new MyStatsChart().execute(this);
+        //startActivity(achartIntent);
         
     }
 }

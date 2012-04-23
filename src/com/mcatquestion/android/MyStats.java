@@ -58,11 +58,7 @@ public class MyStats extends Activity{
         
       //JSON
         JSONObject json = getJSONfromURL(myStatsUrl + userID);
-        JSONArray jarray = null;
-
-        ;
-        ;
-        	
+	
         //set the text views
         try {
 			barText1.setText(json.getString("PhysicsScore")+"%");

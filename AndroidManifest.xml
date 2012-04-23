@@ -16,12 +16,19 @@
             android:name=".MCATQuestionADayActivity"
             android:label="@string/app_name"
             android:theme="@android:style/Theme.NoTitleBar">
+            
+        </activity>
+        <activity
+            android:name="com.mcatquestion.android.Login"
+            android:label="Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="org.achartengine.GraphicalActivity">
+            </activity>
         <activity
             android:name="com.mcatquestion.android.Question"
             android:label="Question">

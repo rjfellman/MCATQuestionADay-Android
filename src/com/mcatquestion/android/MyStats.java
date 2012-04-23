@@ -30,13 +30,19 @@ public class MyStats extends Activity{
 	TextView pctText1, pctText2, pctText3, pctText4;
 	
 	public static final String myStatsUrl = "http://www.mcatquestionaday.com/iPhoneX/getStats.php?userid=";
-	String userID = "CF76C5DD-1FE6-5540-8E6C-BBDB7F62D578";
 	
 	/** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mystats);
+        
+        final AppPreferences preferences = new AppPreferences(this);
+        String userID = preferences.getUsername();
+		//TODO try unhandled exception here;
+        
+        TextView userLabel = (TextView) findViewById(R.id.usernameStats);
+        userLabel.setText("Stats for "+userID);
         
         //get the text views
         barText1 = (TextView) findViewById(R.id.TextView01);
@@ -52,11 +58,7 @@ public class MyStats extends Activity{
         
       //JSON
         JSONObject json = getJSONfromURL(myStatsUrl + userID);
-        JSONArray jarray = null;
-
-        ;
-        ;
-        	
+	
         //set the text views
         try {
 			barText1.setText(json.getString("PhysicsScore")+"%");

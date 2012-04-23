@@ -34,8 +34,9 @@ public class eLearning extends ListActivity{
 	  super.onCreate(savedInstanceState);
 	  
 	  final Context context = this;
+	  final AppPreferences preferences = new AppPreferences(this);
 	  
-	  String userID = "CF76C5DD-1FE6-5540-8E6C-BBDB7F62D578";
+	  String userID = preferences.getUsername();
 	  
 	//JSON
      JSONObject json = getJSONfromURL("http://www.mcatquestion.com/iPhoneX/eLearningAndroid.php?userid="+ userID);

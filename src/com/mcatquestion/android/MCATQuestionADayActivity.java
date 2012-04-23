@@ -35,6 +35,11 @@ public class MCATQuestionADayActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
+        AppPreferences preferences = new AppPreferences(this);
+        System.out.println(preferences.getUsername());
+        System.out.println(preferences.getPassword());
+        System.out.println(preferences.getIsLoggedIn());
+        
         final Context context = this;
         
         todaysQuestionButton = (ImageButton) findViewById(R.id.imageButton1);
@@ -52,88 +57,6 @@ public class MCATQuestionADayActivity extends Activity {
         eLearningButton.getBackground().setAlpha(alphaVal);
         eCourseButton.getBackground().setAlpha(alphaVal);
         newsButton.getBackground().setAlpha(alphaVal);
-        
-        //UserID Generation
-        String membershipID;
-        
-        File file = new File(Environment.getExternalStorageDirectory() + File.separator + "member-id.txt");
-        try {
-			file.createNewFile();
-		} catch (IOException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-
-
-		//try to read the content
-		try{
-			//open the file for reading
-			FileInputStream fis = openFileInput("member-id.txt");
-			fis.read();
-			fis.close();
-			
-			char [] inputBuffer = new char[10];
-			
-			InputStreamReader isr;
-			
-			isr = new InputStreamReader(fis);
-			
-			isr.read(inputBuffer);
-			
-			membershipID = new String(inputBuffer);
-							
-			if(membershipID.equals("")){
-				//do nothing, and use this later
-				System.out.println("Print 1." + membershipID);
-			}
-			else{
-				Random r = new Random();
-				int i1 = r.nextInt(10-0)+0;
-				int i2 = r.nextInt(10-0)+0;
-				int i3 = r.nextInt(10-0)+0;
-				int i4 = r.nextInt(10-0)+0;
-				int i5 = r.nextInt(10-0)+0;
-				int i6 = r.nextInt(10-0)+0;
-				int i7 = r.nextInt(10-0)+0;
-				int i8 = r.nextInt(10-0)+0;
-				int i9 = r.nextInt(10-0)+0;
-				int i10 = r.nextInt(10-0)+0;
-				
-				int[] memberID = new int[] {i1, i2, i3, i4, i5, i6, i7, i8, i9, i10};
-				
-				String str = Arrays.toString(memberID);
-				StringBuffer sb = new StringBuffer();
-				
-				for(int i = 0; i < memberID.length; i++){
-					sb.append(memberID[i]);
-				}
-				
-				str = sb.toString();
-				membershipID = str;
-				System.out.println("Print X." + membershipID);
-				
-				//try to write the content
-				try {
-					//open the file
-					FileOutputStream fos = openFileOutput("member-id.txt", Context.MODE_PRIVATE);
-					fos.write(membershipID.getBytes());
-					fos.close();
-					
-				} catch (java.io.IOException e) {
-					//do something if an IOException occurs
-					System.out.println("Print Badd");
-				}
-			}
-			//close the file again
-			fis.close();
-		} catch (java.io.IOException e) {
-			//do something if it doesn't exist
-			System.out.println("Print Bad");
-			}
-		
-		
-        
-        
         
        todaysQuestionButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

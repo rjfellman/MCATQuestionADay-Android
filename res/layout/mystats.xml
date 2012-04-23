@@ -5,6 +5,16 @@
     android:layout_height="fill_parent"
     android:background="@drawable/mcatbackground" >
 
+    <TextView
+        android:id="@+id/usernameStats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Stats for: XXXX"
+        android:textColor="#C00000"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
     <ImageView
         android:id="@+id/ImageView03"
         android:layout_width="54dp"
@@ -41,6 +51,7 @@
         android:layout_height="165dp"
         android:layout_alignParentTop="true"
         android:layout_marginRight="16dp"
+        android:layout_marginTop="20dp"
         android:layout_toLeftOf="@+id/ImageView02"
         android:scaleType="fitCenter"
         android:src="@drawable/horizbar" />

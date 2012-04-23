@@ -45,7 +45,7 @@ public class MyStats extends Activity{
 		//TODO try unhandled exception here;
         
         TextView userLabel = (TextView) findViewById(R.id.usernameStats);
-        userLabel.setText(userID);
+        userLabel.setText("Stats for "+userID);
                 
         //Intent achartIntent = new MyStatsChart().execute(this);
         //startActivity(achartIntent);

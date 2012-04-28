@@ -1,6 +1,8 @@
 package com.mcatquestion.android;
 
 import java.util.*;
+import com.android.hardware.*;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -41,6 +43,8 @@ public class Previous extends Activity implements SensorEventListener{
 	Intent intent;
 	String dateSelected;
 	
+	private ShakeListener mShaker;
+	
 	/** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -48,6 +52,7 @@ public class Previous extends Activity implements SensorEventListener{
         setContentView(R.layout.previous);
         
         final Context context = this;
+        
         
         //capture items
         submitButton = (Button) findViewById(R.id.submit_button);
@@ -113,74 +118,83 @@ public class Previous extends Activity implements SensorEventListener{
             }
         });
         
+        mShaker = new ShakeListener(this);
+	    mShaker.setOnShakeListener(new ShakeListener.OnShakeListener () {
+	      public void onShake()
+	      {
+	    	  getRandomQuestion();
+	      }
+	    });
+        
         randomButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-            	
-            	//go to random question with filters
-            	if(physicsFilter.isChecked())
-            	{
-            		filters[0] = "physics";
-            	}
-            	else
-            	{
-            		filters[0] = "NO";
-            	}
-            	if(chemFilter.isChecked())
-            	{
-            		filters[1] = "chemistry";
-            	}
-            	else
-            	{
-            		filters[1] = "NO";
-            	}
-            	if(bioFilter.isChecked())
-            	{
-            		filters[2] = "biology";
-            	}
-            	else
-            	{
-            		filters[2] = "NO";
-            	}
-            	if(orgoFilter.isChecked())
-            	{
-            		filters[3] = "orgo";
-            	}
-            	else
-            	{
-            		filters[3] = "NO";
-            	}
-            	
-            	if(!orgoFilter.isChecked() && !chemFilter.isChecked() && !bioFilter.isChecked() && !physicsFilter.isChecked()){
-            		//none are checked, toast a problem
-            		Context context = getApplicationContext();
-        			CharSequence text = "Please select atleast one subject filter";
-        			int duration = Toast.LENGTH_SHORT;
-
-        			Toast toast = Toast.makeText(context, text, duration);
-        			toast.show();      
-            	}
-            	else{
-            	
-            	randomURL = "http://www.mcatquestionaday.com/iPhoneX/getRandomQuestion.php?bioFilter=" + filters[2] + "&ochemFilter=" + filters[3] + "&phyFilter=" + filters[0] + "&chemFilter=" + filters[1];
-            	
-            	//load random url
-            	System.out.println(randomURL);
-            	
-            	connectToServerAndReadData(randomURL);
-            	
-            	//set the date picker or just go to the question...
-            	intent = new Intent(context, Question.class);
-				intent.putExtra("date", randomDateReturned);
-				intent.putExtra("prev", "YES");
-                startActivity(intent);
-            	}
-            	
-            }
-            
-            });
-            
+            public void onClick(View v) {         	
+            	getRandomQuestion();
+            	}   
+            });            
         }
     
+    public void getRandomQuestion() {
+    	
+    	//go to random question with filters
+    	if(physicsFilter.isChecked())
+    	{
+    		filters[0] = "physics";
+    	}
+    	else
+    	{
+    		filters[0] = "NO";
+    	}
+    	if(chemFilter.isChecked())
+    	{
+    		filters[1] = "chemistry";
+    	}
+    	else
+    	{
+    		filters[1] = "NO";
+    	}
+    	if(bioFilter.isChecked())
+    	{
+    		filters[2] = "biology";
+    	}
+    	else
+    	{
+    		filters[2] = "NO";
+    	}
+    	if(orgoFilter.isChecked())
+    	{
+    		filters[3] = "orgo";
+    	}
+    	else
+    	{
+    		filters[3] = "NO";
+    	}
+    	
+    	if(!orgoFilter.isChecked() && !chemFilter.isChecked() && !bioFilter.isChecked() && !physicsFilter.isChecked()){
+    		//none are checked, toast a problem
+    		Context context = getApplicationContext();
+			CharSequence text = "Please select atleast one subject filter";
+			int duration = Toast.LENGTH_SHORT;
+
+			Toast toast = Toast.makeText(context, text, duration);
+			toast.show();      
+    	}
+    	else{
+    	
+    	randomURL = "http://www.mcatquestionaday.com/iPhoneX/getRandomQuestion.php?bioFilter=" + filters[2] + "&ochemFilter=" + filters[3] + "&phyFilter=" + filters[0] + "&chemFilter=" + filters[1];
+    	
+    	//load random url
+    	System.out.println(randomURL);
+    	
+    	connectToServerAndReadData(randomURL);
+    	
+    	Context context = this;
+		//set the date picker or just go to the question...
+		intent = new Intent(context, Question.class);
+		intent.putExtra("date", randomDateReturned);
+		intent.putExtra("prev", "YES");
+        startActivity(intent);
+    	}
+    }
     
     private void connectToServerAndReadData(String urlInput)
     {

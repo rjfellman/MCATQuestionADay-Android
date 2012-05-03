@@ -108,6 +108,7 @@ public class Question extends Activity{
         answerGroup = (RadioGroup) findViewById(R.id.radioGroup1);
         //RadioButton checkedRadioButton = (RadioButton)answerGroup.findViewById(answerGroup.getCheckedRadioButtonId());
         answerA.loadUrl("http://www.mcatquestion.com/iPhoneX/getAnswers.php?date="+ date + "&dataReq=A");
+        answerSelected = "A";
         
         answerGroup.setOnCheckedChangeListener(new OnCheckedChangeListener() {
         	public void onCheckedChanged(RadioGroup group, int checkedId)

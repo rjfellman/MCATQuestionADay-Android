@@ -26,6 +26,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class Previous extends Activity implements SensorEventListener{
@@ -39,6 +40,7 @@ public class Previous extends Activity implements SensorEventListener{
 	String filters[] = new String[4]; 
 	String randomURL;
 	String randomDateReturned="0000-00-00";
+	ImageButton submitButtonImage;
 	
 	Intent intent;
 	String dateSelected;
@@ -57,6 +59,10 @@ public class Previous extends Activity implements SensorEventListener{
         //capture items
         submitButton = (Button) findViewById(R.id.submit_button);
         randomButton = (Button) findViewById(R.id.random_button);
+        submitButtonImage = (ImageButton) findViewById(R.id.imageButton1);
+        
+        submitButtonImage.setBackgroundColor(0x00000000);
+        
         dp = (DatePicker) findViewById(R.id.datePicker1);
         
         physicsFilter = (CheckBox) findViewById(R.id.physics_checkbox);
@@ -83,7 +89,7 @@ public class Previous extends Activity implements SensorEventListener{
         submitButton.setText("Submit");
         
         
-        submitButton.setOnClickListener(new View.OnClickListener() {
+        submitButtonImage.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
             	
             	date = new Date(dp.getYear() - 1900, dp.getMonth(), dp.getDayOfMonth());

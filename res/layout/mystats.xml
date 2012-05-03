@@ -1,248 +1,289 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/RelativeLayout1"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="@drawable/mcatbackground" >
 
-    <TextView
-        android:id="@+id/usernameStats"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:text="Stats for: XXXX"
-        android:textColor="#C00000"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-    
-    <ImageView
-        android:id="@+id/ImageView03"
-        android:layout_width="54dp"
-        android:layout_height="165dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginRight="34dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/horizbar" />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="@drawable/mcatbackground" >
 
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="54dp"
-        android:layout_height="165dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginRight="19dp"
-        android:layout_toLeftOf="@+id/ImageView03"
-        android:scaleType="fitCenter"
-        android:src="@drawable/horizbar" />
+        <FrameLayout
+            android:id="@+id/barchartsArea"
+            android:layout_width="fill_parent"
+            android:layout_height="170dp"
+            android:orientation="vertical" >
+            
+            <WebView
+                    android:id="@+id/barchartsWebView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" 
+                    android:layout_marginTop="5dp"/>
 
-    <ImageView
-        android:id="@+id/ImageView02"
-        android:layout_width="54dp"
-        android:layout_height="165dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginRight="16dp"
-        android:layout_toLeftOf="@+id/imageView1"
-        android:scaleType="fitCenter"
-        android:src="@drawable/horizbar" />
+            <LinearLayout
+                android:id="@+id/LinearLayout01"
+                android:layout_width="fill_parent"
+                android:layout_height="25dp"
+                android:layout_gravity="bottom" >
 
-    <ImageView
-        android:id="@+id/ImageView01"
-        android:layout_width="54dp"
-        android:layout_height="165dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginRight="16dp"
-        android:layout_toLeftOf="@+id/ImageView02"
-        android:scaleType="fitCenter"
-        android:src="@drawable/horizbar" />
+                <TextView
+                    android:id="@+id/TextView01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="0.25"
+                    android:gravity="center"
+                    android:text="100%"
+                    android:textColor="#C00000"
+                    android:textSize="14dp" />
 
-    <ImageView
-        android:id="@+id/ImageView04"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:src="@drawable/placemarkerbg" />
+                <TextView
+                    android:id="@+id/TextView01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="0.25"
+                    android:gravity="center"
+                    android:text="75%"
+                    android:textColor="#C00000"
+                    android:textSize="14dp" />
 
-    <ImageView
-        android:id="@+id/ImageView06"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/ImageView04"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="18dp"
-        android:src="@drawable/placemarkerbg" />
+                <TextView
+                    android:id="@+id/TextView01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="0.25"
+                    android:gravity="center"
+                    android:text="50%"
+                    android:textColor="#C00000"
+                    android:textSize="14dp" />
 
-    <ImageView
-        android:id="@+id/ImageView07"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/ImageView06"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="21dp"
-        android:src="@drawable/placemarkerbg" />
+                <TextView
+                    android:id="@+id/TextView01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="0.25"
+                    android:gravity="center"
+                    android:text="25%"
+                    android:textColor="#C00000"
+                    android:textSize="14dp" />
+            </LinearLayout>
 
-    <ImageView
-        android:id="@+id/ImageView05"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/ImageView07"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="20dp"
-        android:src="@drawable/placemarkerbg" />
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="fill_parent"
+                android:layout_height="25dp"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="23dp" >
 
-    <TextView
-        android:id="@+id/TextView04"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/ImageView05"
-        android:layout_centerHorizontal="true"
-        android:text="Physics"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#C00000" />
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:layout_weight="0.25"
+                    android:text="Physics"
+                    android:textColor="#C00000"
+                    android:textSize="14dp" />
 
-    <TextView
-        android:id="@+id/TextView05"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/ImageView02"
-        android:layout_below="@+id/ImageView02"
-        android:text="Biology"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#C00000" />
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:layout_weight="0.25"
+                    android:text="Chemistry"
+                    android:textColor="#C00000"
+                    android:textSize="14dp" />
 
-    <TextView
-        android:id="@+id/TextView02"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/ImageView07"
-        android:layout_alignLeft="@+id/TextView04"
-        android:text="Biology"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#C00000" />
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="0.25"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:text="Biology"
+                    android:textColor="#C00000"
+                    android:textSize="14dp" />
 
-    <TextView
-        android:id="@+id/TextView03"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/ImageView06"
-        android:layout_centerHorizontal="true"
-        android:text="Chemistry"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#C00000" />
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="0.25"
+                    android:layout_marginRight="14dp"
+                    android:gravity="center"
+                    android:text="Orgo"
+                    android:textColor="#C00000"
+                    android:textSize="14dp" />
+            </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/ImageView04"
-        android:layout_centerHorizontal="true"
-        android:text="Orgo"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#C00000" />
+        </FrameLayout>
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="27dp"
-        android:layout_alignBottom="@+id/ImageView05"
-        android:layout_alignLeft="@+id/ImageView05"
-        android:src="@drawable/newplacemarker" />
+        <View
+            android:id="@+id/View1"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#C00000"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp" />
 
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="wrap_content"
-        android:layout_height="27dp"
-        android:layout_alignBottom="@+id/ImageView06"
-        android:layout_alignLeft="@+id/ImageView06"
-        android:src="@drawable/newplacemarker" />
+        <LinearLayout
+            android:id="@+id/percentilesArea"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical" >
+            
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:text="Physics"
+                android:textSize="14dp"
+                android:textColor="#C00000"/>
 
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="wrap_content"
-        android:layout_height="27dp"
-        android:layout_alignBottom="@+id/ImageView07"
-        android:layout_alignLeft="@+id/ImageView07"
-        android:src="@drawable/newplacemarker" />
+            <FrameLayout
+                android:id="@+id/frameLayout12"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp" >
 
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="wrap_content"
-        android:layout_height="27dp"
-        android:layout_alignBottom="@+id/ImageView04"
-        android:layout_alignLeft="@+id/ImageView04"
-        android:src="@drawable/newplacemarker" />
+                <ImageView
+                    android:id="@+id/physicsPCTBG"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/placemarkerbg" />
 
-    <TextView
-        android:id="@+id/TextView08"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/ImageView01"
-        android:layout_below="@+id/ImageView01"
-        android:text="Physics"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#C00000" />
+                <WebView
+                    android:id="@+id/physicsMarkerWebView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" />
+                
+                <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:text="You are currently performing better than 25% of all users"
+                android:textSize="11dp"
+                android:textColor="#000000"/>
+            </FrameLayout>
 
-    <TextView
-        android:id="@+id/TextView01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/ImageView01"
-        android:layout_below="@+id/TextView05"
-        android:text="100%"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#C00000" />
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:text="Chemistry"
+                android:textSize="14dp"
+                android:textColor="#C00000"/>
 
-    <TextView
-        android:id="@+id/TextView09"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/TextView01"
-        android:layout_alignBottom="@+id/TextView01"
-        android:layout_alignLeft="@+id/ImageView02"
-        android:text="100%"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#C00000" />
+            <FrameLayout
+                android:id="@+id/frameLayout21"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp" >
 
-    <TextView
-        android:id="@+id/TextView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/imageView1"
-        android:layout_below="@+id/imageView1"
-        android:text="Chemistry"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#C00000" />
+                <ImageView
+                    android:id="@+id/chemistryPCTBG"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/placemarkerbg" />
+                              
+                <WebView
+                    android:id="@+id/chemistryMarkerWebView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" />
+                
+                <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:text="You are currently performing better than 25% of all users"
+                android:textSize="11dp"
+                android:textColor="#000000"/>
 
-    <TextView
-        android:id="@+id/TextView06"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/TextView09"
-        android:layout_alignBottom="@+id/TextView09"
-        android:layout_alignLeft="@+id/imageView1"
-        android:text="100%"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#C00000" />
+            </FrameLayout>
+            
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:text="Biology"
+                android:textSize="14dp"
+                android:textColor="#C00000"/>
 
-    <TextView
-        android:id="@+id/TextView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/ImageView03"
-        android:layout_below="@+id/ImageView03"
-        android:text="Orgo"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#C00000" />
+            <FrameLayout
+                android:id="@+id/frameLayout3"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp" >
 
-    <TextView
-        android:id="@+id/TextView07"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/TextView06"
-        android:layout_alignBottom="@+id/TextView06"
-        android:layout_alignLeft="@+id/ImageView03"
-        android:text="100%"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#C00000" />
+                <ImageView
+                    android:id="@+id/bioPCTBG"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/placemarkerbg" />
+                                               
+                <WebView
+                    android:id="@+id/bioMarkerWebView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" />
+                
+                <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:text="You are currently performing better than 25% of all users"
+                android:textSize="11dp"
+                android:textColor="#000000"/>
 
-</RelativeLayout>
+            </FrameLayout>
+            
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:text="Orgo"
+                android:textSize="14dp"
+                android:textColor="#C00000"/>
+
+            <FrameLayout
+                android:id="@+id/frameLayout4"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp" >
+
+                <ImageView
+                    android:id="@+id/ochemPCTBG"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/placemarkerbg" />
+                            
+                <WebView
+                    android:id="@+id/ochemMarkerWebView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" />
+                
+                <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:text="You are currently performing better than 25% of all users"
+                android:textSize="11dp"
+                android:textColor="#000000"/>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>

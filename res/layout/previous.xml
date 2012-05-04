@@ -14,14 +14,14 @@
         android:layout_marginTop="33dp"
         android:startYear="2008" />
 
-    <Button
+    <ImageButton
         android:id="@+id/submit_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/datePicker1"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="27dp"
-        android:text="@string/submit" />
+        android:layout_marginTop="23dp"
+        android:src="@drawable/submithover"/>
 
     <CheckBox
         android:id="@+id/physics_checkbox"
@@ -51,15 +51,6 @@
         android:textColor="#000000"
         android:text="Biology" />
 
-    <Button
-        android:id="@+id/random_button"
-        android:layout_width="220dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/submit_button"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="50dp"
-        android:text="Get a Random Question" />
-
     <CheckBox
         android:id="@+id/orgo_checkbox"
         android:layout_width="wrap_content"
@@ -82,21 +73,23 @@
         android:paddingTop="10dp" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/TextView01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/View1"
         android:layout_centerHorizontal="true"
         android:text="Shake for a random question"
-        android:textColor="#C00000"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#C00000" />
 
-    <ImageButton
-        android:id="@+id/imageButton1"
+    <TextView
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/random_button"
-        android:layout_toLeftOf="@+id/orgo_checkbox"
-        android:src="@drawable/submithover"/>
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/submit_button"
+        android:text="Submit"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#C00000" />
 
 </RelativeLayout>

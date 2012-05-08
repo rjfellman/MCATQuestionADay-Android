@@ -3,6 +3,7 @@ package com.mcatquestion.android;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -28,6 +29,12 @@ import android.view.*;
 
 public class eLearning extends ListActivity{
 	
+	public void onResume(Bundle savedInstanceState) {
+		super.onResume();
+		
+		
+	}
+	
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -37,6 +44,9 @@ public class eLearning extends ListActivity{
 	  final AppPreferences preferences = new AppPreferences(this);
 	  
 	  String userID = preferences.getUsername();
+	  
+	 
+	  
 	  
 	//JSON
      JSONObject json = getJSONfromURL("http://www.mcatquestion.com/iPhoneX/eLearningAndroid.php?userid="+ userID);
@@ -61,6 +71,16 @@ public class eLearning extends ListActivity{
 		}
      }
 	  setListAdapter(new ArrayAdapter<String>(this, R.layout.elearning, mStrings));
+	  
+	  //read the answered questions array (mStrings), if any question appears here, remove that 
+	  ArrayList answered = preferences.getAnsweredQuestions();
+	  
+	  for(int i = 0; i < mStrings.length; i++){
+		  if (preferences.isInAnsweredList(mStrings[i])){
+			  //remove that entry from the array
+			  mStrings[i].replace(mStrings[i], "");
+		  }
+	  }
 
 	  ListView lv = getListView();
 	  lv.setTextFilterEnabled(true);

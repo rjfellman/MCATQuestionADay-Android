@@ -46,7 +46,7 @@
         android:text="       eLearning"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#C00000"
-        android:textStyle="bold" />
+        android:textStyle="normal" />
 
     <TextView
         android:id="@+id/TextView04"
@@ -57,7 +57,7 @@
         android:text="        My Stats"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#C00000"
-        android:textStyle="bold" />
+        android:textStyle="normal" />
 
     <TextView
         android:id="@+id/TextView05"
@@ -68,7 +68,7 @@
         android:text="          eCourse"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#C00000"
-        android:textStyle="bold" />
+        android:textStyle="normal" />
 
     <TextView
         android:id="@+id/TextView01"
@@ -79,7 +79,7 @@
         android:text="            News"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#C00000"
-        android:textStyle="bold" />
+        android:textStyle="normal" />
 
     <ImageButton
         android:id="@+id/imageButton1"
@@ -106,7 +106,7 @@
         android:text="Today&apos;s Question"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#C00000"
-        android:textStyle="bold" />
+        android:textStyle="normal" />
 
     <TextView
         android:id="@+id/TextView03"
@@ -117,6 +117,6 @@
         android:text="   Prev Questions"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#C00000"
-        android:textStyle="bold" />
+        android:textStyle="normal" />
 
 </RelativeLayout>

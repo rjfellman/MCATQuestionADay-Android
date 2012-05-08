@@ -49,6 +49,8 @@ public class Question extends Activity{
 	
 	Intent intent;
 	
+	
+	
 	/** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {

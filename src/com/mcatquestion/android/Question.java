@@ -26,10 +26,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.util.Log;
 import android.view.*;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
@@ -42,6 +44,7 @@ public class Question extends Activity{
 	RadioGroup answerGroup;
 	ImageButton submitButton;
 	TextView dateLabel;
+	ProgressBar progBar;
 	
 	String answerSelected = "";
 	String date = "";
@@ -61,6 +64,8 @@ public class Question extends Activity{
         final Context context = this;
         final AppPreferences preferences = new AppPreferences(this);
         final ArrayList answered = preferences.getAnsweredQuestions();
+        
+        progBar = (ProgressBar) findViewById(R.id.progressBar1);
         
         //if today's date
                 
@@ -103,6 +108,14 @@ public class Question extends Activity{
         questionView.getSettings().setJavaScriptEnabled(true);
         questionView.loadUrl("http://www.mcatquestion.com/iPhoneX/getSelectedQuestion.php?date="+ date);
         questionView.setBackgroundColor(0x00000000);
+        progBar.setVisibility(ProgressBar.VISIBLE);
+        
+        questionView.setWebViewClient(new WebViewClient() {  
+			public void onPageFinished(WebView view, String url)  
+			{  
+				progBar.setVisibility(ProgressBar.GONE);
+			}  
+		});
         
         answerA = (WebView) findViewById(R.id.webview_answer);
         answerA.getSettings().setJavaScriptEnabled(true);

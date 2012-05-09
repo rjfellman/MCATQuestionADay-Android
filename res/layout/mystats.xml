@@ -194,13 +194,15 @@
 
             <ImageView
                 android:id="@+id/physicsPCTBG"
-                android:layout_width="fill_parent"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:src="@drawable/placemarkerbg" />
 
             <WebView
                 android:id="@+id/physicsMarkerWebView"
-                android:layout_width="fill_parent"
+                android:layout_width="300dp"
+                android:layout_gravity="center"
                 android:layout_height="fill_parent" />
 
             <TextView
@@ -208,10 +210,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|center_horizontal"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="3dp"
                 android:text="You are currently performing better than 25% of all users"
                 android:textColor="#000000"
-                android:textSize="11dp" />
+                android:textSize="9dp" />
         </FrameLayout>
 
         <TextView
@@ -231,13 +233,15 @@
 
             <ImageView
                 android:id="@+id/chemistryPCTBG"
-                android:layout_width="fill_parent"
+                android:layout_width="300dp"
+                android:layout_gravity="center"
                 android:layout_height="wrap_content"
                 android:src="@drawable/placemarkerbg" />
 
             <WebView
                 android:id="@+id/chemistryMarkerWebView"
-                android:layout_width="fill_parent"
+                android:layout_width="300dp"
+                android:layout_gravity="center"
                 android:layout_height="fill_parent" />
 
             <TextView
@@ -245,10 +249,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|center_horizontal"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="3dp"
                 android:text="You are currently performing better than 25% of all users"
                 android:textColor="#000000"
-                android:textSize="11dp" />
+                android:textSize="9dp" />
         </FrameLayout>
 
         <TextView
@@ -268,13 +272,15 @@
 
             <ImageView
                 android:id="@+id/bioPCTBG"
-                android:layout_width="fill_parent"
+                android:layout_width="300dp"
+                android:layout_gravity="center"
                 android:layout_height="wrap_content"
                 android:src="@drawable/placemarkerbg" />
 
             <WebView
                 android:id="@+id/bioMarkerWebView"
-                android:layout_width="fill_parent"
+                android:layout_width="300dp"
+                android:layout_gravity="center"
                 android:layout_height="fill_parent" />
 
             <TextView
@@ -282,10 +288,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|center_horizontal"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="3dp"
                 android:text="You are currently performing better than 25% of all users"
                 android:textColor="#000000"
-                android:textSize="11dp" />
+                android:textSize="9dp" />
         </FrameLayout>
 
         <TextView
@@ -305,13 +311,15 @@
 
             <ImageView
                 android:id="@+id/ochemPCTBG"
-                android:layout_width="fill_parent"
+                android:layout_width="300dp"
+                android:layout_gravity="center"
                 android:layout_height="wrap_content"
                 android:src="@drawable/placemarkerbg" />
 
             <WebView
                 android:id="@+id/ochemMarkerWebView"
-                android:layout_width="fill_parent"
+                android:layout_width="300dp"
+                android:layout_gravity="center"
                 android:layout_height="fill_parent" />
 
             <TextView
@@ -319,10 +327,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|center_horizontal"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="3dp"
                 android:text="You are currently performing better than 25% of all users"
                 android:textColor="#000000"
-                android:textSize="11dp" />
+                android:textSize="9dp" />
         </FrameLayout>
     </LinearLayout>
 

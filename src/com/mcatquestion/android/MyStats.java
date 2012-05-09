@@ -103,7 +103,7 @@ public class MyStats extends Activity{
 			e.printStackTrace();
 		}
         try {
-			pctText4.setText("You are currently performing better than "+json.getString("OrgoPercentile")+"% of all users");
+			pctText4.setText("You are currently performing better than "+json.getString("OChemPercentile")+"% of all users");
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

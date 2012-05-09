@@ -100,6 +100,7 @@ public final class R {
         public static final int physicsPCTBG=0x7f050027;
         public static final int physicsScore=0x7f05001b;
         public static final int physics_checkbox=0x7f05003b;
+        public static final int progressBar1=0x7f05004b;
         public static final int radio0=0x7f050045;
         public static final int radio1=0x7f050046;
         public static final int radio2=0x7f050047;

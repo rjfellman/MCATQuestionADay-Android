@@ -1,73 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/RelativeLayout1"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/mcatbackground" >
+    android:background="@drawable/mcatbackground"
+    android:orientation="vertical" >
 
     <DatePicker
         android:id="@+id/datePicker1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:layout_marginTop="33dp"
         android:startYear="2008" />
 
-    <ImageButton
-        android:id="@+id/submit_button"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/datePicker1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="23dp"
-        android:src="@drawable/submithover"/>
+        android:layout_marginTop="15dp" >
 
-    <CheckBox
-        android:id="@+id/physics_checkbox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="52dp"
-        android:textColor="#000000"
-        android:text="Physics" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="50dp"
+            android:layout_weight="0.5"
+            android:gravity="right"
+            android:text="Submit"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#C00000"
+            android:textStyle="bold" />
 
-    <CheckBox
-        android:id="@+id/chem_checkbox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:textColor="#000000"
-        android:text="Chemistry" />
-
-    <CheckBox
-        android:id="@+id/bio_checkbox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:textColor="#000000"
-        android:text="Biology" />
-
-    <CheckBox
-        android:id="@+id/orgo_checkbox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/physics_checkbox"
-        android:layout_alignBottom="@+id/physics_checkbox"
-        android:layout_alignLeft="@+id/bio_checkbox"
-        android:text="Orgo"
-        android:textColor="#000000" />
+        <ImageButton
+            android:id="@+id/submit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="70dp"
+            android:layout_weight="0.5"
+            android:src="@drawable/submithover" />
+    </LinearLayout>
 
     <View
         android:id="@+id/View1"
         android:layout_width="fill_parent"
         android:layout_height="2dp"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/submit_button"
-        android:layout_marginTop="24dp"
         android:background="#C00000"
         android:paddingBottom="10dp"
         android:paddingTop="10dp" />
@@ -76,20 +56,61 @@
         android:id="@+id/TextView01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/View1"
-        android:layout_centerHorizontal="true"
-        android:text="Shake for a random question"
+        android:layout_gravity="center"
+        android:gravity="right"
+        android:layout_marginTop="10dp"
+        android:text="Shake for a random question!"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#C00000" />
+        android:textColor="#C00000"
+        android:textStyle="normal" />
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_toLeftOf="@+id/submit_button"
-        android:text="Submit"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#C00000" />
+        android:layout_marginTop="15dp" >
 
-</RelativeLayout>
+        <CheckBox
+            android:id="@+id/physics_checkbox"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_weight="0.5"
+            android:text="Physics"
+            android:textColor="#000000" />
+
+        <CheckBox
+            android:id="@+id/chem_checkbox"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Chemistry"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="bottom" >
+
+        <CheckBox
+            android:id="@+id/bio_checkbox"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:layout_marginLeft="25dp"
+            android:text="Biology"
+            android:textColor="#000000" />
+
+        <CheckBox
+            android:id="@+id/orgo_checkbox"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Orgo"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+</LinearLayout>

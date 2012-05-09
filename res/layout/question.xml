@@ -27,13 +27,13 @@
         android:paddingTop="10dp"
         android:paddingBottom="10dp" />
 
-    <Button
+    <ImageButton
         android:id="@+id/submit_answer"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
-        android:text="Submit" />
+        android:src="@drawable/submithoverwithtext" />
 
     <RadioGroup
         android:id="@+id/radioGroup1"

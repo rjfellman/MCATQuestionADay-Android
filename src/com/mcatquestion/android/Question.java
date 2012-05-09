@@ -29,6 +29,7 @@ import android.webkit.WebView;
 import android.util.Log;
 import android.view.*;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
@@ -39,7 +40,7 @@ public class Question extends Activity{
 	WebView questionView;
 	WebView answerA;
 	RadioGroup answerGroup;
-	Button submitButton;
+	ImageButton submitButton;
 	TextView dateLabel;
 	
 	String answerSelected = "";
@@ -142,8 +143,9 @@ public class Question extends Activity{
         });
         answerA.setBackgroundColor(0x00000000);
         
-        submitButton = (Button) findViewById(R.id.submit_answer);
-        submitButton.setText("Submit");
+        submitButton = (ImageButton) findViewById(R.id.submit_answer);
+        //submitButton.setText("Submit");
+        submitButton.setBackgroundColor(0x00000000);
         
         
         submitButton.setOnClickListener(new View.OnClickListener() {

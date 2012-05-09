@@ -34,9 +34,10 @@ public final class R {
         public static final int statslabels=0x7f020014;
         public static final int submit=0x7f020015;
         public static final int submithover=0x7f020016;
-        public static final int todayq=0x7f020017;
-        public static final int todayq_depressed=0x7f020018;
-        public static final int vertbar=0x7f020019;
+        public static final int submithoverwithtext=0x7f020017;
+        public static final int todayq=0x7f020018;
+        public static final int todayq_depressed=0x7f020019;
+        public static final int vertbar=0x7f02001a;
     }
     public static final class id {
         public static final int LinearLayout01=0x7f05001f;
@@ -49,7 +50,7 @@ public final class R {
         public static final int TextView04=0x7f050011;
         public static final int TextView05=0x7f050012;
         public static final int View1=0x7f050005;
-        public static final int View2=0x7f05004a;
+        public static final int View2=0x7f050049;
         public static final int answer_image=0x7f050001;
         public static final int answer_text=0x7f050002;
         public static final int barLabel1=0x7f050020;
@@ -60,15 +61,15 @@ public final class R {
         public static final int bargraph_webview=0x7f050004;
         public static final int bioMarkerWebView=0x7f050030;
         public static final int bioPCTBG=0x7f05002f;
-        public static final int bio_checkbox=0x7f05003f;
+        public static final int bio_checkbox=0x7f05003e;
         public static final int biologyScore=0x7f05001d;
-        public static final int chem_checkbox=0x7f05003d;
+        public static final int chem_checkbox=0x7f05003c;
         public static final int chemistryMarkerWebView=0x7f05002c;
         public static final int chemistryPCTBG=0x7f05002b;
         public static final int chemistryScore=0x7f05001c;
         public static final int datePicker1=0x7f050039;
-        public static final int date_display=0x7f05004b;
-        public static final int frameLayout1=0x7f050041;
+        public static final int date_display=0x7f05004a;
+        public static final int frameLayout1=0x7f050040;
         public static final int frameLayout12=0x7f050026;
         public static final int frameLayout21=0x7f05002a;
         public static final int frameLayout3=0x7f05002e;
@@ -82,13 +83,13 @@ public final class R {
         public static final int linearLayout1=0x7f050006;
         public static final int linearLayout2=0x7f050024;
         public static final int linearLayout3=0x7f05001a;
-        public static final int linearLayout4=0x7f05003e;
+        public static final int linearLayout4=0x7f05003d;
         public static final int loginButton=0x7f050008;
         public static final int news_switch=0x7f050036;
         public static final int ochemMarkerWebView=0x7f050034;
         public static final int ochemPCTBG=0x7f050033;
         public static final int orgoScore=0x7f05001e;
-        public static final int orgo_checkbox=0x7f050040;
+        public static final int orgo_checkbox=0x7f05003f;
         public static final int passwordField=0x7f05000b;
         public static final int pctLabel1=0x7f050029;
         public static final int pctLabel2=0x7f05002d;
@@ -98,23 +99,22 @@ public final class R {
         public static final int physicsMarkerWebView=0x7f050028;
         public static final int physicsPCTBG=0x7f050027;
         public static final int physicsScore=0x7f05001b;
-        public static final int physics_checkbox=0x7f05003c;
-        public static final int radio0=0x7f050046;
-        public static final int radio1=0x7f050047;
-        public static final int radio2=0x7f050048;
-        public static final int radio3=0x7f050049;
-        public static final int radioGroup1=0x7f050045;
+        public static final int physics_checkbox=0x7f05003b;
+        public static final int radio0=0x7f050045;
+        public static final int radio1=0x7f050046;
+        public static final int radio2=0x7f050047;
+        public static final int radio3=0x7f050048;
+        public static final int radioGroup1=0x7f050044;
         public static final int rememberMe=0x7f05000c;
         public static final int results_webview=0x7f050003;
-        public static final int submit_answer=0x7f050044;
-        public static final int submit_button=0x7f05003b;
+        public static final int submit_answer=0x7f050043;
+        public static final int submit_button=0x7f05003a;
         public static final int textView1=0x7f05000a;
-        public static final int textView2=0x7f05003a;
         public static final int usernameField=0x7f050009;
-        public static final int webview_answer=0x7f050043;
+        public static final int webview_answer=0x7f050042;
         public static final int webview_ecourse=0x7f050007;
         public static final int webview_news=0x7f050037;
-        public static final int webview_question=0x7f050042;
+        public static final int webview_question=0x7f050041;
     }
     public static final class layout {
         public static final int answer=0x7f030000;

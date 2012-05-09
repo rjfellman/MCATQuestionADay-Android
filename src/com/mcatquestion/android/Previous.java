@@ -10,7 +10,6 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.sql.Date;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 import android.app.Activity;
@@ -20,10 +19,7 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.os.Bundle;
-import android.text.format.DateFormat;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.ImageButton;
@@ -35,7 +31,6 @@ public class Previous extends Activity implements SensorEventListener{
 	Date date;
 	java.util.Date todayDate, startDate;
 	String todaysDate;
-	Button submitButton, randomButton;
 	CheckBox physicsFilter,bioFilter,chemFilter,orgoFilter;
 	String filters[] = new String[4]; 
 	String randomURL;
@@ -57,9 +52,7 @@ public class Previous extends Activity implements SensorEventListener{
 
 
 		//capture items
-		submitButton = (Button) findViewById(R.id.submit_button);
-		//randomButton = (Button) findViewById(R.id.random_button);
-		submitButtonImage = (ImageButton) findViewById(R.id.imageButton1);
+		submitButtonImage = (ImageButton) findViewById(R.id.submit_button);
 
 		submitButtonImage.setBackgroundColor(0x00000000);
 
@@ -84,10 +77,6 @@ public class Previous extends Activity implements SensorEventListener{
 		todayDate = today.getTime();
 		startDate = new Date(2008 - 1900,4,28);
 		System.out.println(startDate);
-
-
-		submitButton.setText("Submit");
-
 
 		submitButtonImage.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
@@ -130,134 +119,124 @@ public class Previous extends Activity implements SensorEventListener{
 			{
 				getRandomQuestion();
 			}
-		});
-		/*
-        randomButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {         	
-            	getRandomQuestion();
-            	}   
-            });   */         
-        }
-
-		public void getRandomQuestion() {
-
-			//go to random question with filters
-			if(physicsFilter.isChecked())
-			{
-				filters[0] = "physics";
-			}
-			else
-			{
-				filters[0] = "NO";
-			}
-			if(chemFilter.isChecked())
-			{
-				filters[1] = "chemistry";
-			}
-			else
-			{
-				filters[1] = "NO";
-			}
-			if(bioFilter.isChecked())
-			{
-				filters[2] = "biology";
-			}
-			else
-			{
-				filters[2] = "NO";
-			}
-			if(orgoFilter.isChecked())
-			{
-				filters[3] = "orgo";
-			}
-			else
-			{
-				filters[3] = "NO";
-			}
-
-			if(!orgoFilter.isChecked() && !chemFilter.isChecked() && !bioFilter.isChecked() && !physicsFilter.isChecked()){
-				//none are checked, toast a problem
-				Context context = getApplicationContext();
-				CharSequence text = "Please select atleast one subject filter";
-				int duration = Toast.LENGTH_SHORT;
-
-				Toast toast = Toast.makeText(context, text, duration);
-				toast.show();      
-			}
-			else{
-
-				randomURL = "http://www.mcatquestionaday.com/iPhoneX/getRandomQuestion.php?bioFilter=" + filters[2] + "&ochemFilter=" + filters[3] + "&phyFilter=" + filters[0] + "&chemFilter=" + filters[1];
-
-				//load random url
-				System.out.println(randomURL);
-
-				connectToServerAndReadData(randomURL);
-
-				Context context = this;
-				//set the date picker or just go to the question...
-				intent = new Intent(context, Question.class);
-				intent.putExtra("date", randomDateReturned);
-				intent.putExtra("prev", "YES");
-				startActivity(intent);
-			}
-		}
-
-		private void connectToServerAndReadData(String urlInput)
-		{
-			HttpURLConnection conn;
-			boolean result = false;
-
-			try{
-				// Enter any URL here you want to connect
-				URL url = new URL(urlInput);
-
-				// Open a HTTP connection to the URL
-
-				conn = (HttpURLConnection) url.openConnection();
-				// conn.connect();
-				BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-				String line ;
-
-
-
-				while ((line = rd.readLine()) != null) {
-
-					System.out.println("Readed Data from Server data- "+line);
-					randomDateReturned = line;
-
-				}
-
-
-
-				rd.close();
-
-
-			}catch(MalformedURLException e){
-
-				e.printStackTrace();
-			}
-			catch(IOException e){
-				e.printStackTrace();               
-			}
-			catch(Exception e){
-				e.printStackTrace();           
-			}
-
-
-
-
-
-		}
-
-		@Override
-		public void onAccuracyChanged(Sensor sensor, int accuracy) {
-			// TODO Auto-generated method stub
-
-		}
-
-		@Override
-		public void onSensorChanged(SensorEvent event) {
-			// TODO Auto-generated method stub
-
-		}    
+		});     
 	}
+
+	public void getRandomQuestion() {
+
+		//go to random question with filters
+		if(physicsFilter.isChecked())
+		{
+			filters[0] = "physics";
+		}
+		else
+		{
+			filters[0] = "NO";
+		}
+		if(chemFilter.isChecked())
+		{
+			filters[1] = "chemistry";
+		}
+		else
+		{
+			filters[1] = "NO";
+		}
+		if(bioFilter.isChecked())
+		{
+			filters[2] = "biology";
+		}
+		else
+		{
+			filters[2] = "NO";
+		}
+		if(orgoFilter.isChecked())
+		{
+			filters[3] = "orgo";
+		}
+		else
+		{
+			filters[3] = "NO";
+		}
+
+		if(!orgoFilter.isChecked() && !chemFilter.isChecked() && !bioFilter.isChecked() && !physicsFilter.isChecked()){
+			//none are checked, toast a problem
+			Context context = getApplicationContext();
+			CharSequence text = "Please select atleast one subject filter";
+			int duration = Toast.LENGTH_SHORT;
+
+			Toast toast = Toast.makeText(context, text, duration);
+			toast.show();      
+		}
+		else{
+
+			randomURL = "http://www.mcatquestionaday.com/iPhoneX/getRandomQuestion.php?bioFilter=" + filters[2] + "&ochemFilter=" + filters[3] + "&phyFilter=" + filters[0] + "&chemFilter=" + filters[1];
+
+			//load random url
+			System.out.println(randomURL);
+
+			connectToServerAndReadData(randomURL);
+
+			Context context = this;
+			//set the date picker or just go to the question...
+			intent = new Intent(context, Question.class);
+			intent.putExtra("date", randomDateReturned);
+			intent.putExtra("prev", "YES");
+			startActivity(intent);
+		}
+	}
+
+	private void connectToServerAndReadData(String urlInput)
+	{
+		HttpURLConnection conn;
+		boolean result = false;
+
+		try{
+			// Enter any URL here you want to connect
+			URL url = new URL(urlInput);
+
+			// Open a HTTP connection to the URL
+
+			conn = (HttpURLConnection) url.openConnection();
+			// conn.connect();
+			BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+			String line ;
+
+
+
+			while ((line = rd.readLine()) != null) {
+
+				System.out.println("Readed Data from Server data- "+line);
+				randomDateReturned = line;
+
+			}
+
+
+
+			rd.close();
+
+
+		}catch(MalformedURLException e){
+
+			e.printStackTrace();
+		}
+		catch(IOException e){
+			e.printStackTrace();               
+		}
+		catch(Exception e){
+			e.printStackTrace();           
+		}
+
+	}
+
+	@Override
+	public void onAccuracyChanged(Sensor sensor, int accuracy) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onSensorChanged(SensorEvent event) {
+		// TODO Auto-generated method stub
+
+	}    
+}

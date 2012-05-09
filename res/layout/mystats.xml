@@ -58,7 +58,7 @@
             android:layout_gravity="bottom" >
 
             <TextView
-                android:id="@+id/TextView01"
+                android:id="@+id/barLabel1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -69,7 +69,7 @@
                 android:textSize="14dp" />
 
             <TextView
-                android:id="@+id/TextView01"
+                android:id="@+id/barLabel2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -80,7 +80,7 @@
                 android:textSize="14dp" />
 
             <TextView
-                android:id="@+id/TextView01"
+                android:id="@+id/barLabel3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -91,7 +91,7 @@
                 android:textSize="14dp" />
 
             <TextView
-                android:id="@+id/TextView01"
+                android:id="@+id/barLabel4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -204,7 +204,7 @@
                 android:layout_height="fill_parent" />
 
             <TextView
-                android:id="@+id/textView1"
+                android:id="@+id/pctLabel1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|center_horizontal"
@@ -241,7 +241,7 @@
                 android:layout_height="fill_parent" />
 
             <TextView
-                android:id="@+id/textView1"
+                android:id="@+id/pctLabel2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|center_horizontal"
@@ -278,7 +278,7 @@
                 android:layout_height="fill_parent" />
 
             <TextView
-                android:id="@+id/textView1"
+                android:id="@+id/pctLabel3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|center_horizontal"
@@ -315,7 +315,7 @@
                 android:layout_height="fill_parent" />
 
             <TextView
-                android:id="@+id/textView1"
+                android:id="@+id/pctLabel4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|center_horizontal"

@@ -15,8 +15,6 @@ import org.json.JSONObject;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -30,14 +28,13 @@ public class Answer extends Activity{
 	WebView resultsView;
 	WebView bargraphView;
 	TextView answerText;
+	TextView textView1;
 	ImageView answerImage;
 	
 	String answerSubmitted;
 	String date;
 	int answerIsCorrect;
 
-	
-	
 	/** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -49,6 +46,8 @@ public class Answer extends Activity{
         bargraphView = (WebView) findViewById(R.id.bargraph_webview);
         answerText = (TextView) findViewById(R.id.answer_text);
         answerImage = (ImageView) findViewById(R.id.answer_image);
+        
+        textView1 = (TextView) findViewById(R.id.textView1);
         
         //capture images
         Intent my_intent = getIntent();
@@ -82,6 +81,8 @@ public class Answer extends Activity{
 	        	bargraphView.loadUrl("http://www.mcatquestion.com/iPhoneX/androidGraph.php?date="+ date);
 	        	bargraphView.setBackgroundColor(0x00000000);
 	        	bargraphView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+	        	
+	        	textView1.setVisibility(TextView.VISIBLE);
 
 			}
 			else{
@@ -97,6 +98,7 @@ public class Answer extends Activity{
 	        	
 	        	//show red X mark image
 	        	answerImage.setImageDrawable(getResources().getDrawable(R.drawable.cancel));
+	        	textView1.setVisibility(TextView.GONE);
 			}
 		} catch (JSONException e) {
 			e.printStackTrace();

@@ -19,6 +19,7 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
@@ -42,6 +43,20 @@ public class Previous extends Activity implements SensorEventListener{
 
 	private ShakeListener mShaker;
 
+	/*@Override
+	public void onPause() {
+		mShaker.setOnShakeListener(null);
+	}
+	@Override
+	public void onResume() {
+		mShaker.setOnShakeListener(new ShakeListener.OnShakeListener () {
+			public void onShake()
+			{
+				getRandomQuestion();
+			}
+		});    
+	}*/
+	
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -119,7 +134,7 @@ public class Previous extends Activity implements SensorEventListener{
 			{
 				getRandomQuestion();
 			}
-		});     
+		}); 
 	}
 
 	public void getRandomQuestion() {
@@ -181,7 +196,10 @@ public class Previous extends Activity implements SensorEventListener{
 			intent = new Intent(context, Question.class);
 			intent.putExtra("date", randomDateReturned);
 			intent.putExtra("prev", "YES");
+			//mShaker.setOnShakeListener(null);
 			startActivity(intent);
+			
+			  
 		}
 	}
 

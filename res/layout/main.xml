@@ -1,150 +1,199 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/RelativeLayout1"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/mcatbackground" >
+    android:background="@drawable/mcatbackground"
+    android:orientation="vertical" >
 
-    <FrameLayout
-        android:id="@+id/frameLayout1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.85" >
 
-        <ImageButton
-            android:id="@+id/imageButton1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/todayq" />
-
-        <TextView
-            android:id="@+id/TextView02"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center"
-            android:text="Today&apos;s Question"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="#C00000"
-            android:textStyle="normal" />
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/frameLayout6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true" >
-
-        <ImageButton
-            android:id="@+id/imageButton6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/news" />
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="bottom"
+            android:src="@drawable/pulsebanner" />
 
         <TextView
-            android:id="@+id/TextView01"
+            android:id="@+id/mainScreenDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center"
-            android:text="News"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="40dp"
+            android:text="  MM-DD-YYYY  "
+            android:textStyle="italic"
             android:textColor="#C00000"
-            android:textStyle="normal" />
-    </FrameLayout>
+            android:textAppearance="?android:attr/textAppearanceSmall" />
 
-    <FrameLayout
-        android:id="@+id/frameLayout5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true" >
+    </RelativeLayout>
 
-        <ImageButton
-            android:id="@+id/imageButton5"
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.15" >
+
+        <FrameLayout
+            android:id="@+id/frameLayout1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ecourse" />
+            android:layout_marginLeft="10dp" >
 
-        <TextView
-            android:id="@+id/TextView05"
+            <ImageButton
+                android:id="@+id/imageButton1"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/todayq" />
+
+            <TextView
+                android:id="@+id/TextView02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:text="Today&apos;s Question"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#C00000"
+                android:textStyle="normal" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center"
-            android:text="eCourse"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="#C00000"
-            android:textStyle="normal" />
-    </FrameLayout>
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp" >
 
-    <FrameLayout
-        android:id="@+id/frameLayout4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true" >
+            <ImageButton
+                android:id="@+id/imageButton6"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/news" />
 
-        <ImageButton
-            android:id="@+id/imageButton4"
+            <TextView
+                android:id="@+id/TextView01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:text="News"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#C00000"
+                android:textStyle="normal" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/elearning" />
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp" >
 
-        <TextView
-            android:id="@+id/textView1"
+            <ImageButton
+                android:id="@+id/imageButton5"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ecourse" />
+
+            <TextView
+                android:id="@+id/TextView05"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:text="eCourse"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#C00000"
+                android:textStyle="normal" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center"
-            android:text="eLearning"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="#C00000"
-            android:textStyle="normal" />
-    </FrameLayout>
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp" >
 
-    <FrameLayout
-        android:id="@+id/frameLayout3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignTop="@+id/frameLayout4" >
+            <ImageButton
+                android:id="@+id/imageButton4"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/elearning" />
 
-        <ImageButton
-            android:id="@+id/imageButton3"
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:text="eLearning"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#C00000"
+                android:textStyle="normal" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/stats" />
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/frameLayout4"
+            android:layout_marginLeft="10dp" >
 
-        <TextView
-            android:id="@+id/TextView04"
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/stats" />
+
+            <TextView
+                android:id="@+id/TextView04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:text="My Stats"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#C00000"
+                android:textStyle="normal" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center"
-            android:text="My Stats"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="#C00000"
-            android:textStyle="normal" />
-    </FrameLayout>
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp" >
 
-    <FrameLayout
-        android:id="@+id/frameLayout2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true" >
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/previousq" />
 
-        <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/previousq" />
+            <TextView
+                android:id="@+id/TextView03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:text="Prev Questions"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#C00000"
+                android:textStyle="normal" />
+        </FrameLayout>
+    </RelativeLayout>
 
-        <TextView
-            android:id="@+id/TextView03"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center"
-            android:text="Prev Questions"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="#C00000"
-            android:textStyle="normal" />
-    </FrameLayout>
-
-</RelativeLayout>
+</LinearLayout>

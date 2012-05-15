@@ -101,6 +101,7 @@ public class Answer extends Activity{
 	        	textView1.setVisibility(TextView.GONE);
 			}
 		} catch (JSONException e) {
+			//there was an error processing your request, please try again later
 			e.printStackTrace();
 		}
     }

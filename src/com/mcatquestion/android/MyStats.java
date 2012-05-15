@@ -168,17 +168,45 @@ public class MyStats extends Activity{
         physicsPCT.loadUrl("http://www.mcatquestion.com/iPhoneX/MCAT-Percentiles.php?userid="+preferences.getUsername()+"&subject=physics");
         physicsPCT.setBackgroundColor(0x00000000);
         
+        physicsPCT.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {//
+                return true;
+            }
+        });
+        
         chemPCT.getSettings().setJavaScriptEnabled(true);
         chemPCT.loadUrl("http://www.mcatquestion.com/iPhoneX/MCAT-Percentiles.php?userid="+preferences.getUsername()+"&subject=chem");
         chemPCT.setBackgroundColor(0x00000000);
+        
+        chemPCT.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {//
+                return true;
+            }
+        });
         
         bioPCT.getSettings().setJavaScriptEnabled(true);
         bioPCT.loadUrl("http://www.mcatquestion.com/iPhoneX/MCAT-Percentiles.php?userid="+preferences.getUsername()+"&subject=bio");
         bioPCT.setBackgroundColor(0x00000000);
         
+        bioPCT.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {//
+                return true;
+            }
+        });
+        
         ochemPCT.getSettings().setJavaScriptEnabled(true);
         ochemPCT.loadUrl("http://www.mcatquestion.com/iPhoneX/MCAT-Percentiles.php?userid="+preferences.getUsername()+"&subject=ochem");
         ochemPCT.setBackgroundColor(0x00000000);
+        
+        ochemPCT.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {//
+                return true;
+            }
+        });
         
     }
     

@@ -10,7 +10,7 @@
         android:id="@+id/datePicker1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="33dp"
+        android:layout_marginTop="10dp"
         android:startYear="2008" />
 
     <LinearLayout
@@ -44,8 +44,8 @@
         android:layout_gravity="center"
         android:gravity="right"
         android:layout_marginTop="10dp"
-        android:text="Shake for a random question!"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Shake for a random question using filters below!"
+        android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="#C00000"
         android:textStyle="normal" />
 

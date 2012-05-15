@@ -115,6 +115,17 @@ public class Question extends Activity{
 			{  
 				progBar.setVisibility(ProgressBar.GONE);
 			}  
+			
+			public void onReceivedError(WebView view, int errorCode, String description, String failingUrl)
+			{
+				//load a blank screen?
+				questionView.setVisibility(WebView.GONE);
+				answerA.setVisibility(WebView.GONE);
+				progBar.setVisibility(ProgressBar.VISIBLE);
+				//set content views background to the new image
+				questionView.getRootView().setBackgroundResource(R.drawable.mcatbackground_trouble);
+				
+			}
 		});
         
         answerA = (WebView) findViewById(R.id.webview_answer);

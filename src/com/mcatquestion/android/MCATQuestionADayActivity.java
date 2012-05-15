@@ -8,7 +8,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.Random;
 
 import org.apache.http.HttpEntity;
@@ -23,9 +26,13 @@ import android.app.Activity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Environment;
 import android.widget.ImageButton;
+import android.widget.TextView;
+import android.widget.Toast;
 import android.util.Log;
 import android.view.*;
 
@@ -38,6 +45,18 @@ public class MCATQuestionADayActivity extends Activity {
 	ImageButton eCourseButton;
 	ImageButton newsButton;
 	
+	TextView todaysDate;
+	
+	private boolean isNetworkConnected() {
+		  ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+		  NetworkInfo ni = cm.getActiveNetworkInfo();
+		  if (ni == null) {
+		   // There are no active networks.
+		   return false;
+		  } else
+		   return true;
+		 }
+	
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -45,6 +64,15 @@ public class MCATQuestionADayActivity extends Activity {
         setContentView(R.layout.main);
         
         AppPreferences preferences = new AppPreferences(this);
+        
+        todaysDate = (TextView) findViewById(R.id.mainScreenDate);
+        //Set todays date in Month Day, Year format
+        Calendar today = new GregorianCalendar();
+        SimpleDateFormat df = new SimpleDateFormat();
+        df.applyPattern("  MMMM dd, yyyy  ");
+        String todaysDateMarker;
+        todaysDateMarker = df.format(today.getTime());
+        todaysDate.setText(todaysDateMarker);
         
         //For testing only!
         //preferences.saveUsername("TempReset");
@@ -101,20 +129,38 @@ public class MCATQuestionADayActivity extends Activity {
        
        myStatsButton.setOnClickListener(new View.OnClickListener() {
            public void onClick(View v) {
-       		
-        		Intent intent;
+       		if(isNetworkConnected()){
+       			Intent intent;
         		intent = new Intent(context, MyStats.class);
                 startActivity(intent);
+       		}
+       		else {
+       			Context context = getApplicationContext();
+				CharSequence text = "Internet Connection Required for this area!";
+				int duration = Toast.LENGTH_SHORT;
+
+				Toast toast = Toast.makeText(context, text, duration);
+				toast.show();   
+       		}
            }
        });
        
       eLearningButton.setOnClickListener(new View.OnClickListener() {
-           public void onClick(View v) {
-       		
-        		Intent intent;
-        		intent = new Intent(context, eLearning.class);
-                startActivity(intent);
-           }
+    	  public void onClick(View v) {
+         		if(isNetworkConnected()){
+         			Intent intent;
+          		intent = new Intent(context, eLearning.class);
+                  startActivity(intent);
+         		}
+         		else {
+         			Context context = getApplicationContext();
+  				CharSequence text = "Internet Connection Required for this area!";
+  				int duration = Toast.LENGTH_SHORT;
+
+  				Toast toast = Toast.makeText(context, text, duration);
+  				toast.show();   
+         		}
+             }
        });
        
        eCourseButton.setOnClickListener(new View.OnClickListener() {

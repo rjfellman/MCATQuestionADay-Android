@@ -6,15 +6,18 @@
 
     <uses-sdk android:minSdkVersion="7" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    
     
 
     <application
         android:icon="@drawable/logo57x57"
-        android:label="@string/app_name"
+        android:label="MCAT"
         android:debuggable="true">
         <activity
             android:name=".MCATQuestionADayActivity"
-            android:label="@string/app_name"
+            android:label="MCAT"
             android:theme="@android:style/Theme.NoTitleBar"
             android:screenOrientation="portrait">
             <intent-filter>

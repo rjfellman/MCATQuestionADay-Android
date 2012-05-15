@@ -9,7 +9,7 @@ import android.view.*;
 public class News extends Activity{
 	
 	WebView newsView;
-	Button newsSwitch;
+	Button newsSwitch; //
 	int flag;
 	
 	/** Called when the activity is first created. */

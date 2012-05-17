@@ -43,23 +43,25 @@ public class Previous extends Activity implements SensorEventListener{
 
 	private ShakeListener mShaker;
 
-	/*@Override
+	@Override
 	public void onPause() {
+		super.onPause();
 		mShaker.setOnShakeListener(null);
 	}
 	@Override
 	public void onResume() {
+		super.onResume();
 		mShaker.setOnShakeListener(new ShakeListener.OnShakeListener () {
 			public void onShake()
 			{
 				getRandomQuestion();
 			}
 		});    
-	}*/
-	
+	}
+
 	/** Called when the activity is first created. */
 	@Override
-	public void onCreate(Bundle savedInstanceState) {
+	public void onCreate(Bundle savedInstanceState) { //
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.previous);
 
@@ -198,8 +200,8 @@ public class Previous extends Activity implements SensorEventListener{
 			intent.putExtra("prev", "YES");
 			//mShaker.setOnShakeListener(null);
 			startActivity(intent);
-			
-			  
+
+
 		}
 	}
 

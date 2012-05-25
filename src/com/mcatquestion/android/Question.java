@@ -179,13 +179,13 @@ public class Question extends Activity{
             public void onClick(View v) {
             	if(preferences.isInAnsweredList(date)){
             		//then it was already answered, dont log stats
-            		String answerToCloud = "http://www.mcatquestionaday.com/iPhoneX/checkAnswer.php?date="+date+"&answer="+answerSelected+"&userid="+preferences.getUsername()+"&didAnswer=YES";
+            		String answerToCloud = "http://www.mcatquestionaday.com/iPhoneX/postAnswer.php?date="+date+"&answer="+answerSelected+"&userid="+preferences.getUsername();
             		JSONObject json = getJSONfromURL(answerToCloud);
             	}
             	else {
             		//add it to list and log stats
             		preferences.addToAnsweredQuestions(date);
-            		String answerToCloud = "http://www.mcatquestionaday.com/iPhoneX/checkAnswer.php?date="+date+"&answer="+answerSelected+"&userid="+preferences.getUsername()+"&didAnswer=NO";
+            		String answerToCloud = "http://www.mcatquestionaday.com/iPhoneX/postAnswer.php?date="+date+"&answer="+answerSelected+"&userid="+preferences.getUsername();
             		JSONObject json = getJSONfromURL(answerToCloud);
             	}
             	

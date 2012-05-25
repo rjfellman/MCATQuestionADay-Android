@@ -74,6 +74,9 @@ public class MCATQuestionADayActivity extends Activity {
         todaysDateMarker = df.format(today.getTime());
         todaysDate.setText(todaysDateMarker);
         
+        //JSON
+        JSONObject jsonCall = getJSONfromURL("http://www.mcatquestion.com/iPhoneX/mystats_mcatusers.php?userid="+preferences.getUsername());
+        
         //For testing only!
         //preferences.saveUsername("TempReset");
 
@@ -81,13 +84,13 @@ public class MCATQuestionADayActivity extends Activity {
         	//username hasnt been created yet
         	//create one and save it to defaults
         	
-        	preferences.saveUsername(generateUserNameAndSave());
+        	//preferences.saveUsername(generateUserNameAndSave());
         	System.out.println("Saving username" + preferences.getUsername());
         	Log.i("user", "Saving username" + preferences.getUsername());
         	//
         	//create an entry online
-        	String urlUsername = "http://www.mcatquestionaday.com/iPhoneX/admin/checkIfUserExists.php?userid="+preferences.getUsername();
-    		JSONObject jsonUser = getJSONfromURL(urlUsername);  	
+        	//String urlUsername = "http://www.mcatquestionaday.com/iPhoneX/admin/checkIfUserExists.php?userid="+preferences.getUsername();
+    		//JSONObject jsonUser = getJSONfromURL(urlUsername);  	
         }
         
         final Context context = this;

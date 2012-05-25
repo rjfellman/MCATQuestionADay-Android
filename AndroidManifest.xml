@@ -20,17 +20,16 @@
             android:label="MCAT"
             android:theme="@android:style/Theme.NoTitleBar"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            
         </activity>
         <activity
             android:name="com.mcatquestion.android.Login"
             android:screenOrientation="portrait"
             android:label="Login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name="org.achartengine.GraphicalActivity">
             </activity>

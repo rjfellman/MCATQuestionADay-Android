@@ -55,8 +55,13 @@ public class MyStats extends Activity{
         pctText4 = (TextView) findViewById(R.id.pctLabel4);
         
       //JSON
+        JSONObject jsonCall = getJSONfromURL("http://www.mcatquestion.com/iPhoneX/mystats_mcatusers.php?userid="+preferences.getUsername());
+        
+      //JSON
         JSONObject json = getJSONfromURL("http://www.mcatquestion.com/iPhoneX/getStats.php?userid="+preferences.getUsername());
 	
+        
+       
         //set the text views
         try {
 			barText1.setText(json.getString("PhysicsScore")+"%");

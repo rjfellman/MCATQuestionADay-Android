@@ -43,7 +43,7 @@ public class Question extends Activity{
 	WebView answerA;
 	RadioGroup answerGroup;
 	ImageButton submitButton;
-	TextView dateLabel;
+	TextView dateLabel,errorMessage;
 	ProgressBar progBar;
 	
 	String answerSelected = "";
@@ -103,6 +103,8 @@ public class Question extends Activity{
         dateForLabel = df.format(temp);
         dateLabel.setText(dateForLabel);
         
+        errorMessage = (TextView) findViewById(R.id.error_message);
+        errorMessage.setVisibility(TextView.GONE);
         
         questionView = (WebView) findViewById(R.id.webview_question);
         questionView.getSettings().setJavaScriptEnabled(true);
@@ -119,11 +121,12 @@ public class Question extends Activity{
 			public void onReceivedError(WebView view, int errorCode, String description, String failingUrl)
 			{
 				//load a blank screen?
-				questionView.setVisibility(WebView.GONE);
-				answerA.setVisibility(WebView.GONE);
+				questionView.setVisibility(WebView.INVISIBLE);
+				answerA.setVisibility(WebView.INVISIBLE);
 				progBar.setVisibility(ProgressBar.VISIBLE);
+				errorMessage.setVisibility(TextView.VISIBLE);
 				//set content views background to the new image
-				questionView.getRootView().setBackgroundResource(R.drawable.mcatbackground_trouble);
+				//questionView.getRootView().setBackgroundResource(R.drawable.mcatbackground_trouble);
 				
 			}
 		});

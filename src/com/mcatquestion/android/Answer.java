@@ -13,6 +13,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.google.ads.AdRequest;
+import com.google.ads.AdView;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -34,12 +37,19 @@ public class Answer extends Activity{
 	String answerSubmitted;
 	String date;
 	int answerIsCorrect;
+	
+	String admobCode = "a14fba7422247d1";
 
 	/** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.answer);
+        
+        //AdMob Setup
+        AdView adview = (AdView)findViewById(R.id.adView);
+		AdRequest re = new AdRequest();
+		adview.loadAd(re);
         
         //capture the graphic outlets
         resultsView = (WebView) findViewById(R.id.results_webview);

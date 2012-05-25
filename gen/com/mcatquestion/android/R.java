@@ -53,7 +53,8 @@ public final class R {
         public static final int TextView04=0x7f050021;
         public static final int TextView05=0x7f05001c;
         public static final int View1=0x7f050006;
-        public static final int View2=0x7f050009;
+        public static final int View2=0x7f050050;
+        public static final int adView=0x7f050009;
         public static final int answer_image=0x7f050002;
         public static final int answer_text=0x7f050003;
         public static final int barLabel1=0x7f05002c;
@@ -71,7 +72,8 @@ public final class R {
         public static final int chemistryPCTBG=0x7f050036;
         public static final int chemistryScore=0x7f050028;
         public static final int datePicker1=0x7f050041;
-        public static final int date_display=0x7f050050;
+        public static final int date_display=0x7f050051;
+        public static final int error_message=0x7f050053;
         public static final int frameLayout1=0x7f050014;
         public static final int frameLayout12=0x7f050031;
         public static final int frameLayout2=0x7f050022;
@@ -108,7 +110,7 @@ public final class R {
         public static final int physicsPCTBG=0x7f050032;
         public static final int physicsScore=0x7f050027;
         public static final int physics_checkbox=0x7f050043;
-        public static final int progressBar1=0x7f050051;
+        public static final int progressBar1=0x7f050052;
         public static final int radio0=0x7f05004c;
         public static final int radio1=0x7f05004d;
         public static final int radio2=0x7f05004e;

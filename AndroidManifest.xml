@@ -24,12 +24,17 @@
         <activity
             android:name="com.mcatquestion.android.Login"
             android:screenOrientation="portrait"
-            android:label="Login">
+            android:label="MCAT">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.mcatquestion.android.Registration"
+            android:screenOrientation="portrait"
+            android:label="MCAT User Registration">
         </activity>
         <activity android:name="org.achartengine.GraphicalActivity">
             </activity>

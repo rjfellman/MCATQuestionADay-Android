@@ -34,12 +34,21 @@ public class Login extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
         
-        Button loginButton;
+        Button loginButton, registerButton;
         loginButton = (Button) findViewById(R.id.loginButton);
+        registerButton = (Button) findViewById(R.id.register);
         
         final Context context = this;
         
         final AppPreferences preferences = new AppPreferences(this);
+        
+        registerButton.setOnClickListener(new View.OnClickListener() {
+        	 public void onClick(View v) {
+        		//proceed to registration page
+     			intent = new Intent(context, Registration.class);
+                 startActivity(intent);
+        	 }
+        });
         
         //if they are logged in, then proceed to main menu
         System.out.println(preferences.getIsLoggedIn());

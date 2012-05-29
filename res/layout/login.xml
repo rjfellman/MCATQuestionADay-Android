@@ -6,15 +6,6 @@
     android:background="@drawable/mcatbackground"
     android:orientation="vertical" >
 
-    <Button
-        android:id="@+id/loginButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:text="Login" />
-
     <EditText
         android:id="@+id/usernameField"
         android:layout_width="wrap_content"
@@ -54,5 +45,35 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/passwordField"
         android:text="Remember Me" />
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="35dp"
+        android:text="Register" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/register"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:text="Login" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loginButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:text="Not a member? Register here!"
+        android:textColor="#C00000"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </RelativeLayout>
